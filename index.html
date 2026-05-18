@@ -749,6 +749,104 @@ html, body {
 ::-webkit-scrollbar { width: 3px; }
 ::-webkit-scrollbar-track { background: transparent; }
 ::-webkit-scrollbar-thumb { background: var(--border2); border-radius: 2px; }
+
+/* ── RETOUR FIELD ── */
+.retour-section {
+  padding: 12px 20px 16px;
+  border-top: 1px solid var(--border);
+  background: var(--bg2);
+}
+.retour-label {
+  font-family: 'DM Mono', monospace;
+  font-size: 9px;
+  color: #B87EF0;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  margin-bottom: 8px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+.retour-textarea {
+  width: 100%;
+  background: var(--bg3);
+  border: 1px solid var(--border2);
+  border-radius: 6px;
+  padding: 10px 12px;
+  font-family: 'Manrope', sans-serif;
+  font-size: 12px;
+  color: var(--text);
+  line-height: 1.6;
+  resize: none;
+  min-height: 70px;
+  outline: none;
+  transition: border-color 0.15s;
+}
+.retour-textarea::placeholder { color: var(--dim); }
+.retour-textarea:focus { border-color: #B87EF0; }
+.retour-save {
+  margin-top: 8px;
+  font-family: 'DM Mono', monospace;
+  font-size: 10px;
+  padding: 6px 16px;
+  border-radius: 4px;
+  background: rgba(184,127,240,0.12);
+  color: #B87EF0;
+  border: 1px solid rgba(184,127,240,0.25);
+  cursor: pointer;
+  letter-spacing: 0.06em;
+}
+.retour-saved {
+  font-family: 'DM Mono', monospace;
+  font-size: 9px;
+  color: var(--recup);
+  margin-left: 10px;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+.retour-saved.show { opacity: 1; }
+
+/* ── JOURNAL PAGE ── */
+.journal-entry {
+  padding: 16px 20px;
+  border-bottom: 1px solid var(--border);
+  background: var(--card-bg);
+}
+.je-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 8px;
+}
+.je-date {
+  font-family: 'DM Mono', monospace;
+  font-size: 10px;
+  color: var(--dim);
+}
+.je-title {
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--text);
+  flex: 1;
+}
+.je-text {
+  font-size: 12px;
+  color: var(--text2);
+  line-height: 1.7;
+  white-space: pre-wrap;
+}
+.journal-empty {
+  padding: 40px 20px;
+  text-align: center;
+  font-size: 13px;
+  color: var(--dim);
+  line-height: 1.8;
+}
+
+/* ── MUSCU INLINE CARD ── */
+.sc-type.t-muscu-a { background: rgba(200,241,53,0.1); color: var(--accent); }
+.sc-type.t-muscu-b { background: rgba(240,180,41,0.1); color: var(--gold); }
+.sc-type.t-muscu-c { background: rgba(184,127,240,0.1); color: #B87EF0; }
 </style>
 </head>
 <body>
@@ -817,6 +915,30 @@ html, body {
 4. Rouleau foam : ischios + mollets + IT band (30" par zone)
 5. Balle massage plante des pieds</div>
             </div>
+            <div class="retour-section"><div class="retour-label">📝 Mon retour</div><textarea class="retour-textarea" id="r-s01-lun" placeholder="Comment tu t'es senti ? Énergie, douleurs, humeur..." oninput="autoSave('s01-lun',this.value)"></textarea><div style="display:flex;align-items:center"><button class="retour-save" onclick="saveRetour('s01-lun')">Sauvegarder</button><span class="retour-saved" id="saved-s01-lun">✓ Sauvegardé</span></div></div>
+          </div>
+        </div>
+
+        <div class="session-card">
+          <div class="sc-header" onclick="toggleCard(this)">
+            <span class="sc-day">LUN</span>
+            <span class="sc-type t-muscu-c">Muscu · C</span>
+            <span class="sc-title">Routine C Abdos — 8h30</span>
+            <span class="sc-meta">20'</span>
+            <span class="sc-chevron">▾</span>
+          </div>
+          <div class="sc-body">
+            <div class="sb-section">
+              <div class="sb-label sbl-note">◆ Routine C · Abdominaux · 20 min</div>
+              <div class="sb-text"><strong>Hollow body hold</strong> — 3 × 20–30" · repos 20"
+<strong>Ab wheel rollout</strong> — 3 × 8–10 reps · depuis les genoux
+<strong>Pallof press</strong> — 3 × 12 chaque côté · élastique rouge
+<strong>Crunch bicycle lent</strong> — 3 × 16 reps · tempo 3"
+<strong>Relevé de jambes suspendu</strong> — 3 × 10 · barre + sangles
+<strong>Russian twist</strong> — 3 × 20 reps · KB 12 kg</div>
+              <div class="note-box">Lundi matin = corps frais. Core à froid = meilleur recrutement neuromusculaire. 20 min max — qualité sur quantité.</div>
+            </div>
+            <div class="retour-section"><div class="retour-label">📝 Mon retour</div><textarea class="retour-textarea" id="r-s01-lun-c" placeholder="Sensations, difficultés, progrès..." oninput="autoSave('s01-lun-c',this.value)"></textarea><div style="display:flex;align-items:center"><button class="retour-save" onclick="saveRetour('s01-lun-c')">Sauvegarder</button><span class="retour-saved" id="saved-s01-lun-c">✓ Sauvegardé</span></div></div>
           </div>
         </div>
 
@@ -2005,6 +2127,18 @@ Allure mécanique. Pas d'émotion. Respire. Gère.
 
   </div><!-- /page-ref -->
 
+  <!-- ══ PAGE : JOURNAL ══ -->
+  <div class="page" id="page-journal">
+    <div class="page-hero">
+      <div class="page-eyebrow">Historique · Toutes séances</div>
+      <div class="page-title">Journal<br><span>d'Entraînement</span></div>
+      <div class="page-sub">Tes retours séance par séance · Sauvegardés localement sur cet appareil</div>
+    </div>
+    <div id="journal-list">
+      <div class="journal-empty">Aucun retour encore.<br>Ouvre une séance, déplie-la et écris ton retour en bas.</div>
+    </div>
+  </div><!-- /page-journal -->
+
 </div><!-- /main -->
 
 <!-- BOTTOM NAV -->
@@ -2025,61 +2159,100 @@ Allure mécanique. Pas d'émotion. Respire. Gère.
     <span class="nav-icon">📊</span>
     <span class="nav-label">Référence</span>
   </button>
+  <button class="nav-item" onclick="switchPage('journal',this)">
+    <span class="nav-icon">📓</span>
+    <span class="nav-label">Journal</span>
+  </button>
 </nav>
 
 <script>
-// ── Theme toggle ──
-function toggleTheme() {
-  const html = document.documentElement;
-  const btn = document.getElementById('themeBtn');
-  if (html.dataset.theme === 'dark') {
-    html.dataset.theme = 'light';
-    btn.textContent = '🌙';
-    document.querySelector('meta[name="theme-color"]').content = '#FFFFFF';
-    localStorage.setItem('theme', 'light');
-  } else {
-    html.dataset.theme = 'dark';
-    btn.textContent = '☀️';
-    document.querySelector('meta[name="theme-color"]').content = '#0C0D0F';
-    localStorage.setItem('theme', 'dark');
-  }
+// ── Theme ──
+function toggleTheme(){const h=document.documentElement,b=document.getElementById('themeBtn');if(h.dataset.theme==='dark'){h.dataset.theme='light';b.textContent='🌙';document.querySelector('meta[name="theme-color"]').content='#FFFFFF';localStorage.setItem('theme','light');}else{h.dataset.theme='dark';b.textContent='☀️';document.querySelector('meta[name="theme-color"]').content='#0C0D0F';localStorage.setItem('theme','dark');}}
+const savedTheme=localStorage.getItem('theme')||'dark';document.documentElement.dataset.theme=savedTheme;document.getElementById('themeBtn').textContent=savedTheme==='dark'?'☀️':'🌙';
+
+// ── Navigation ──
+function switchPage(n,b){document.querySelectorAll('.page').forEach(p=>p.classList.remove('active'));document.querySelectorAll('.nav-item').forEach(i=>i.classList.remove('active'));document.getElementById('page-'+n).classList.add('active');b.classList.add('active');window.scrollTo(0,0);if(n==='journal')renderJournal();}
+function switchBloc(id,b){document.querySelectorAll('.bloc-content').forEach(c=>c.classList.remove('active'));document.querySelectorAll('.bloc-tab').forEach(t=>t.classList.remove('active'));document.getElementById(id).classList.add('active');b.classList.add('active');window.scrollTo(0,0);}
+function toggleCard(h){h.parentElement.classList.toggle('open');}
+
+// ── Retour / Journal ──
+const SESSION_NAMES = {
+  's01-lun':'S01 · LUN · Repos + Mobilité','s01-lun-c':'S01 · LUN · Muscu C Abdos',
+  's01-mar':'S01 · MAR · VMA 6×2\'30"','s01-mer-a':'S01 · MER · Muscu A',
+  's01-mer':'S01 · MER · Foncier Z2 45\'','s01-jeu':'S01 · JEU · Seuil 2×12\'',
+  's01-ven-a':'S01 · VEN · Muscu A','s01-ven':'S01 · VEN · Natation technique',
+  's01-sam':'S01 · SAM · Longue 70\'','s01-dim':'S01 · DIM · Bike Erg récup',
+  's02-lun':'S02 · LUN · Repos','s02-lun-c':'S02 · LUN · Muscu C Abdos',
+  's02-mar':'S02 · MAR · VMA 8×2\'','s02-mer-b':'S02 · MER · Muscu B',
+  's02-mer':'S02 · MER · Foncier Z2 50\'','s02-jeu':'S02 · JEU · Seuil 3×10\'',
+  's02-ven-b':'S02 · VEN · Muscu B','s02-ven':'S02 · VEN · Natation',
+  's02-sam':'S02 · SAM · Longue 75\'','s02-dim':'S02 · DIM · Bike Erg récup',
+  's03-lun':'S03 · LUN · Repos','s03-lun-c':'S03 · LUN · Muscu C Abdos',
+  's03-mar':'S03 · MAR · VMA 5×4\'','s03-mer-a':'S03 · MER · Muscu A',
+  's03-mer':'S03 · MER · Foncier + accélérations','s03-jeu':'S03 · JEU · Allure cible 3×12\'',
+  's03-ven-a':'S03 · VEN · Muscu A','s03-ven':'S03 · VEN · Nage test 800m',
+  's03-sam':'S03 · SAM · Longue 85\'','s03-dim':'S03 · DIM · Bike Erg récup',
+  's04-lun':'S04 · LUN · Repos affûtage','s04-mar':'S04 · MAR · VMA courte',
+  's04-mer-b':'S04 · MER · Muscu B (léger)','s04-mer':'S04 · MER · Foncier 40\'',
+  's04-jeu':'S04 · JEU · Test 5km','s04-ven':'S04 · VEN · Repos',
+  's04-sam':'S04 · SAM · Activation','s04-dim':'S04 · DIM · Repos',
+  's05-lun':'S05 · LUN · Repos race week','s05-mar':'S05 · MAR · Activation',
+  's05-mer':'S05 · MER · Repos','s05-jeu':'S05 · JEU · Rappel neuro',
+  's05-ven':'S05 · VEN · Repos nutrition','s05-sam':'S05 · SAM · Marche mobilité',
+  's05-dim':'S05 · DIM · 🏁 RACE 10k Estérel'
+};
+
+function autoSave(id, val) {
+  localStorage.setItem('retour_' + id, val);
 }
 
-// ── Restore theme ──
-const savedTheme = localStorage.getItem('theme') || 'dark';
-document.documentElement.dataset.theme = savedTheme;
-document.getElementById('themeBtn').textContent = savedTheme === 'dark' ? '☀️' : '🌙';
-
-// ── Page navigation ──
-function switchPage(name, btn) {
-  document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
-  document.querySelectorAll('.nav-item').forEach(n => n.classList.remove('active'));
-  document.getElementById('page-' + name).classList.add('active');
-  btn.classList.add('active');
-  window.scrollTo(0, 0);
+function saveRetour(id) {
+  const ta = document.getElementById('r-' + id);
+  if (!ta) return;
+  const val = ta.value.trim();
+  if (!val) return;
+  localStorage.setItem('retour_' + id, val);
+  const ts = new Date().toLocaleString('fr-FR', {day:'2-digit',month:'2-digit',year:'numeric',hour:'2-digit',minute:'2-digit'});
+  localStorage.setItem('retour_ts_' + id, ts);
+  const saved = document.getElementById('saved-' + id);
+  if (saved) { saved.classList.add('show'); setTimeout(() => saved.classList.remove('show'), 2000); }
 }
 
-// ── Bloc tabs ──
-function switchBloc(id, btn) {
-  document.querySelectorAll('.bloc-content').forEach(b => b.classList.remove('active'));
-  document.querySelectorAll('.bloc-tab').forEach(t => t.classList.remove('active'));
-  document.getElementById(id).classList.add('active');
-  btn.classList.add('active');
-  window.scrollTo(0, 0);
-}
-
-// ── Session card toggle ──
-function toggleCard(header) {
-  const card = header.parentElement;
-  card.classList.toggle('open');
-}
-
-// ── Register service worker ──
-if ('serviceWorker' in navigator) {
-  window.addEventListener('load', () => {
-    navigator.serviceWorker.register('sw.js').catch(() => {});
+function loadAllRetours() {
+  Object.keys(SESSION_NAMES).forEach(id => {
+    const val = localStorage.getItem('retour_' + id);
+    const ta = document.getElementById('r-' + id);
+    if (ta && val) ta.value = val;
   });
 }
+
+function renderJournal() {
+  const list = document.getElementById('journal-list');
+  const entries = Object.keys(SESSION_NAMES)
+    .map(id => ({ id, name: SESSION_NAMES[id], val: localStorage.getItem('retour_' + id), ts: localStorage.getItem('retour_ts_' + id) }))
+    .filter(e => e.val && e.val.trim());
+
+  if (!entries.length) {
+    list.innerHTML = '<div class="journal-empty">Aucun retour encore.<br>Ouvre une séance, déplie-la<br>et écris ton retour en bas.</div>';
+    return;
+  }
+
+  list.innerHTML = entries.map(e => `
+    <div class="journal-entry">
+      <div class="je-header">
+        <span class="je-date">${e.ts || '—'}</span>
+        <span class="je-title">${e.name}</span>
+      </div>
+      <div class="je-text">${e.val}</div>
+    </div>
+  `).join('');
+}
+
+// Load saved retours on startup
+window.addEventListener('load', loadAllRetours);
+
+// ── Service Worker ──
+if('serviceWorker'in navigator){window.addEventListener('load',()=>{navigator.serviceWorker.register('sw.js').catch(()=>{});});}
 </script>
 </body>
 </html>
