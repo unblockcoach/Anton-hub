@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-<meta name="apple-mobile-web-app-title" content="Unblock Hub">
+<meta name="apple-mobile-web-app-title" content="Anton Hub">
 <meta name="theme-color" content="#0C0D0F">
 <link rel="manifest" href="manifest.json">
 <link rel="apple-touch-icon" href="icon.png">
@@ -892,689 +892,769 @@ html, body {
     <!-- BLOC 1 -->
     <div class="bloc-content active" id="b1">
 
-      <!-- S01 -->
+      <!-- ═══ S01 · 19 MAI ═══ -->
       <div class="week-block">
         <div class="week-header">
-          <span class="week-num">S01</span>
-          <span class="week-title">Mise en place</span>
-          <span class="week-badge wb-med">~26 km</span>
+          <span class="week-num">S01 · 19 Mai</span>
+          <span class="week-title">Spécifique 10k — Entrée</span>
+          <span class="week-badge wb-med">Programme S5</span>
         </div>
 
-        <div class="session-card">
-          <div class="sc-header" onclick="toggleCard(this)">
-            <span class="sc-day">LUN</span>
-            <span class="sc-type t-rest">Repos</span>
-            <span class="sc-title">Repos actif + mobilité</span>
-            <span class="sc-meta">20'</span>
-            <span class="sc-chevron">▾</span>
-          </div>
-          <div class="sc-body">
-            <div class="sb-section">
-              <div class="sb-label sbl-main">■ Routine mobilité 20 min</div>
-              <div class="sb-text">1. Rotation thoracique au sol × 10 chaque côté
-2. Hip flexor stretch 60" chaque côté
-3. 90/90 hanches 60" chaque position
-4. Rouleau foam : ischios + mollets + IT band (30" par zone)
-5. Balle massage plante des pieds</div>
-            </div>
-            <div class="retour-section"><div class="retour-label">📝 Mon retour</div><textarea class="retour-textarea" id="r-s01-lun" placeholder="Comment tu t'es senti ? Énergie, douleurs, humeur..." oninput="autoSave('s01-lun',this.value)"></textarea><div style="display:flex;align-items:center"><button class="retour-save" onclick="saveRetour('s01-lun')">Sauvegarder</button><span class="retour-saved" id="saved-s01-lun">✓ Sauvegardé</span></div></div>
-          </div>
-        </div>
-
-        <div class="session-card">
-          <div class="sc-header" onclick="toggleCard(this)">
-            <span class="sc-day">LUN</span>
-            <span class="sc-type t-muscu-c">Muscu · C</span>
-            <span class="sc-title">Routine C Abdos — 8h30</span>
-            <span class="sc-meta">20'</span>
-            <span class="sc-chevron">▾</span>
-          </div>
-          <div class="sc-body">
-            <div class="sb-section">
-              <div class="sb-label sbl-note">◆ Routine C · Abdominaux · 20 min</div>
-              <div class="sb-text"><strong>Hollow body hold</strong> — 3 × 20–30" · repos 20"
-<strong>Ab wheel rollout</strong> — 3 × 8–10 reps · depuis les genoux
-<strong>Pallof press</strong> — 3 × 12 chaque côté · élastique rouge
-<strong>Crunch bicycle lent</strong> — 3 × 16 reps · tempo 3"
-<strong>Relevé de jambes suspendu</strong> — 3 × 10 · barre + sangles
-<strong>Russian twist</strong> — 3 × 20 reps · KB 12 kg</div>
-              <div class="note-box">Lundi matin = corps frais. Core à froid = meilleur recrutement neuromusculaire. 20 min max — qualité sur quantité.</div>
-            </div>
-            <div class="retour-section"><div class="retour-label">📝 Mon retour</div><textarea class="retour-textarea" id="r-s01-lun-c" placeholder="Sensations, difficultés, progrès..." oninput="autoSave('s01-lun-c',this.value)"></textarea><div style="display:flex;align-items:center"><button class="retour-save" onclick="saveRetour('s01-lun-c')">Sauvegarder</button><span class="retour-saved" id="saved-s01-lun-c">✓ Sauvegardé</span></div></div>
-          </div>
-        </div>
-
-        <div class="session-card">
-          <div class="sc-header" onclick="toggleCard(this)">
-            <span class="sc-day">MAR</span>
-            <span class="sc-type t-run">Run · VMA</span>
-            <span class="sc-title">VMA 6 × 2'30" @ 4:06/km</span>
-            <span class="sc-meta">50' · 9km</span>
-            <span class="sc-chevron">▾</span>
-          </div>
-          <div class="sc-body">
-            <div class="sb-section">
-              <div class="sb-label sbl-warm">◆ Échauffement · 12 min</div>
-              <div class="sb-text"><strong>5 min</strong> trot Z1 (FC &lt;130)
-<strong>Éducatifs 4 min :</strong> montées genoux 30" + talons-fesses 30" + jambes tendues 30" × 2
-<strong>2 strides progressives 80m</strong> · 1ère à 80% · 2ème à 90% · récup marche 60"</div>
-            </div>
-            <div class="sb-section">
-              <div class="sb-label sbl-main">◆ Corps de séance · 22 min</div>
-              <table class="interval-table">
-                <tr><th>Reps</th><th>Durée</th><th>Allure</th><th>FC</th><th>Récup</th></tr>
-                <tr><td>1–4</td><td>2'30"</td><td><span class="pace-chip">4:06/km</span></td><td><span class="fc-chip">165–172</span></td><td>2'30" trot</td></tr>
-                <tr><td>5–6</td><td>2'30"</td><td><span class="pace-chip">4:06/km</span></td><td><span class="fc-chip">165–175</span></td><td>—</td></tr>
-              </table>
-              <div class="note-box"><strong>Tapis :</strong> 14.6 km/h. Lance la vitesse 5" avant le signal.
-<strong>Extérieur :</strong> GPS a 5–8" de lag — pars légèrement fort les 10 premières secondes.
-Si tu décroches sur rep 5 → réduis à 4:12/km.</div>
-            </div>
-            <div class="sb-section">
-              <div class="sb-label sbl-cool">◆ Retour au calme · 10 min</div>
-              <div class="sb-text"><strong>5 min</strong> trot Z1 (FC &lt;130) — ne jamais s'arrêter brusquement après une VMA
-Étirements 5 min : quadriceps 30"×2 · ischios 30"×2 · mollets excentriques 10 reps chaque (descente 4")</div>
-            </div>
-            <div class="sb-section">
-              <div class="sb-label sbl-recup">◆ Récupération</div>
-              <div class="recup-tools">
-                <span class="rtool">🥶 Boule froide · mollets + quadriceps · 5 min</span>
-                <span class="rtool">⚡ Compex récup · 20 min soir</span>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="session-card">
-          <div class="sc-header" onclick="toggleCard(this)">
-            <span class="sc-day">MER</span>
-            <span class="sc-type t-run">Run · Foncier</span>
-            <span class="sc-title">Foncier Z2 — 45 min</span>
-            <span class="sc-meta">45' · 7.5km</span>
-            <span class="sc-chevron">▾</span>
-          </div>
-          <div class="sc-body">
-            <div class="sb-section">
-              <div class="sb-label sbl-warm">◆ Échauffement intégré</div>
-              <div class="sb-text">Départ à <strong>6:10/km</strong> les 5 premières minutes. La progression naturelle est l'échauffement.</div>
-            </div>
-            <div class="sb-section">
-              <div class="sb-label sbl-main">◆ Corps de séance · 40 min</div>
-              <div class="sb-text"><strong>40 min @ 5:40–6:00/km</strong> · <span class="fc-chip" style="display:inline">FC 128–148</span>
-
-Conversation possible = bonne allure. Si respiration forcée → trop vite.
-Normal d'être à 6:05 si fatigue de la VMA d'hier.</div>
-            </div>
-            <div class="sb-section">
-              <div class="sb-label sbl-cool">◆ Retour au calme · 5 min</div>
-              <div class="sb-text">Ralentir progressivement sur les 2 dernières minutes.
-Étirements debout 3 min : mollets + quadriceps + hanches.</div>
-            </div>
-          </div>
-        </div>
-
-        <div class="session-card">
-          <div class="sc-header" onclick="toggleCard(this)">
-            <span class="sc-day">JEU</span>
-            <span class="sc-type t-run">Run · Seuil</span>
-            <span class="sc-title">Seuil 2 × 12' + Muscu A soir</span>
-            <span class="sc-meta">55' + 25' soir</span>
-            <span class="sc-chevron">▾</span>
-          </div>
-          <div class="sc-body">
-            <div class="sb-section">
-              <div class="sb-label sbl-warm">◆ Échauffement · 15 min</div>
-              <div class="sb-text"><strong>8 min</strong> trot Z1 + <strong>éducatifs 4 min</strong> + <strong>2 accélérations 40"</strong> progressives vers allure seuil (4:55 puis 4:50)</div>
-            </div>
-            <div class="sb-section">
-              <div class="sb-label sbl-main">◆ Corps de séance</div>
-              <table class="interval-table">
-                <tr><th>Bloc</th><th>Durée</th><th>Allure</th><th>FC</th><th>Récup</th></tr>
-                <tr><td>Rep 1</td><td>12'</td><td><span class="pace-chip">4:47/km</span></td><td><span class="fc-chip">158–165</span></td><td>3' trot</td></tr>
-                <tr><td>Rep 2</td><td>12'</td><td><span class="pace-chip">4:47/km</span></td><td><span class="fc-chip">160–168</span></td><td>—</td></tr>
-              </table>
-              <div class="note-box">Rep 1 semble facile les 3 premières minutes → résiste à l'envie d'accélérer. FC monte lentement (90" de lag). À partir de la min 8 ça pique — c'est là où l'adaptation se crée.</div>
-            </div>
-            <div class="sb-section">
-              <div class="sb-label sbl-cool">◆ Retour au calme · 8 min</div>
-              <div class="sb-text"><strong>5 min</strong> trot Z1 + mollets excentriques bord de marche (10 reps, descente 4")</div>
-            </div>
-            <div class="sb-section">
-              <div class="sb-label sbl-note">◆ Soir — Muscu Running Routine A · 25 min</div>
-              <div class="sb-text">Voir onglet <strong>Muscu</strong> → Routine A
-Gainage frontal · Gainage latéral · Hip Bridge · Hip abduction · Mollet excentrique · Dead bug</div>
-              <div class="recup-tools"><span class="rtool">👢 Bottes presso · 20 min soir</span></div>
-            </div>
-          </div>
-        </div>
-
-        <div class="session-card">
-          <div class="sc-header" onclick="toggleCard(this)">
-            <span class="sc-day">VEN</span>
-            <span class="sc-type t-swim">Nage · Technique</span>
-            <span class="sc-title">Natation — Éducatifs techniques</span>
-            <span class="sc-meta">Piscine · 45'</span>
-            <span class="sc-chevron">▾</span>
-          </div>
-          <div class="sc-body">
-            <div class="sb-section">
-              <div class="sb-label sbl-warm">◆ Échauffement · 200m</div>
-              <div class="sb-text"><strong>100m</strong> nage libre très lente (zéro tension épaules)
-<strong>4 × 25m</strong> jambes seules avec planche · récup 20"</div>
-            </div>
-            <div class="sb-section">
-              <div class="sb-label sbl-main">◆ Corps de séance · TECHNIQUE PURE</div>
-              <div class="sb-text"><strong>4 × 25m</strong> Catch-up drill
-<strong>4 × 25m</strong> Breathing drill (respiration tous les 3 coups)
-<strong>4 × 50m</strong> Nage complète focus placement (1 point technique par 50m · récup 30")
-<strong>4 × 25m</strong> Finger drag drill</div>
-              <div class="note-box">Phase 1 = 100% technique, zéro cardio. Si tu sors essoufflé → tu es allé trop vite. Voir onglet <strong>Nage</strong> pour le détail de chaque drill.</div>
-            </div>
-            <div class="sb-section">
-              <div class="sb-label sbl-cool">◆ Retour au calme · 100m</div>
-              <div class="sb-text">100m dos crawlé ou brasse très lente · décompression épaules.</div>
-            </div>
-          </div>
-        </div>
-
-        <div class="session-card">
-          <div class="sc-header" onclick="toggleCard(this)">
-            <span class="sc-day">SAM</span>
-            <span class="sc-type t-run">Run · Longue</span>
-            <span class="sc-title">Sortie longue Z2 70' + 4 strides</span>
-            <span class="sc-meta">70' · 11km</span>
-            <span class="sc-chevron">▾</span>
-          </div>
-          <div class="sc-body">
-            <div class="sb-section">
-              <div class="sb-label sbl-warm">◆ Départ progressif · 10 min</div>
-              <div class="sb-text">Départ à <strong>6:10/km</strong> les 10 premières minutes (FC &lt;130).</div>
-            </div>
-            <div class="sb-section">
-              <div class="sb-label sbl-main">◆ Corps de séance</div>
-              <div class="sb-text"><strong>55 min @ 5:40–5:55/km</strong> · FC 130–145
-Si FC &gt;150 → ralentis.
-
-<strong>4 strides de 20"</strong> dans les 5 dernières minutes
-Accélération progressive, détendu · récup 40" marche entre chaque.</div>
-            </div>
-            <div class="sb-section">
-              <div class="sb-label sbl-cool">◆ Retour au calme · 15 min</div>
-              <div class="sb-text">Marche <strong>5 min</strong> (obligatoire — ne jamais s'arrêter brusquement)
-Étirements 10 min : mollets excentrique + ischios + quadriceps + hip flexor 60" chaque + rotation thoracique dos</div>
-            </div>
-            <div class="sb-section">
-              <div class="sb-label sbl-recup">◆ Récupération — Priorité absolue</div>
-              <div class="recup-tools">
-                <span class="rtool">👢 Bottes presso · 30 min</span>
-                <span class="rtool">🥶 Boule froide · mollets</span>
-                <span class="rtool">⚡ Électrodes Compex · récup jambes · 20 min soir</span>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="session-card">
-          <div class="sc-header" onclick="toggleCard(this)">
-            <span class="sc-day">DIM</span>
-            <span class="sc-type t-bike">Bike Erg · Récup</span>
-            <span class="sc-title">Récupération active Bike Erg Z1</span>
-            <span class="sc-meta">25' · optionnel</span>
-            <span class="sc-chevron">▾</span>
-          </div>
-          <div class="sc-body">
-            <div class="sb-section">
-              <div class="sb-label sbl-main">◆ Protocole récup active</div>
-              <div class="sb-text"><strong>25 min bike erg</strong> · FC &lt;125 · résistance minimale · cadence 80–85 rpm
-
-Ce n'est PAS une séance d'entraînement.
-Objectif : faciliter la récupération musculaire post-longue.
-Si FC &gt;130 → baisser la résistance.</div>
-              <div class="note-box">Alternative si fatigué : marche 30 min ou repos total. Ne jamais forcer une séance de récup.</div>
-            </div>
-          </div>
-        </div>
-      </div><!-- /S01 -->
-
-      <!-- S02 -->
-      <div class="week-block">
-        <div class="week-header">
-          <span class="week-num">S02</span>
-          <span class="week-title">Montée en charge</span>
-          <span class="week-badge wb-high">~31 km</span>
-        </div>
-
+        <!-- LUN : Repos + Muscu C Legs -->
         <div class="session-card">
           <div class="sc-header" onclick="toggleCard(this)">
             <span class="sc-day">LUN</span><span class="sc-type t-rest">Repos</span>
-            <span class="sc-title">Repos total</span><span class="sc-chevron">▾</span>
+            <span class="sc-title">Repos + mobilité</span><span class="sc-meta">20'</span><span class="sc-chevron">▾</span>
           </div>
-          <div class="sc-body"><div class="sb-section"><div class="sb-text">Repos complet ou mobilité douce 20 min max.</div></div></div>
+          <div class="sc-body">
+            <div class="sb-section"><div class="sb-label sbl-main">Mobilité 20 min</div>
+              <div class="sb-text">1. Rotation thoracique au sol × 10 chaque côté
+2. Hip flexor stretch 60" chaque côté
+3. 90/90 hanches 60" chaque position
+4. Rouleau foam : ischios + mollets + IT band
+5. Balle massage plante des pieds</div>
+            </div>
+            <div class="retour-section"><div class="retour-label">📝 Mon retour</div><textarea class="retour-textarea" id="r-s01-lun" placeholder="Énergie, forme générale..." oninput="autoSave('s01-lun',this.value)"></textarea><div style="display:flex;align-items:center"><button class="retour-save" onclick="saveRetour('s01-lun')">Sauvegarder</button><span class="retour-saved" id="saved-s01-lun">✓ Sauvegardé</span></div></div>
+          </div>
         </div>
 
         <div class="session-card">
           <div class="sc-header" onclick="toggleCard(this)">
-            <span class="sc-day">MAR</span><span class="sc-type t-run">Run · VMA</span>
-            <span class="sc-title">VMA 8 × 2' @ 3:44/km (110%)</span>
-            <span class="sc-meta">55' · 10km</span><span class="sc-chevron">▾</span>
+            <span class="sc-day">LUN</span><span class="sc-type t-muscu-c">Legs · C</span>
+            <span class="sc-title">Routine C — Legs + Abdos · 8h30</span><span class="sc-meta">25'</span><span class="sc-chevron">▾</span>
           </div>
           <div class="sc-body">
-            <div class="sb-section">
-              <div class="sb-label sbl-warm">◆ Échauffement · 13 min</div>
-              <div class="sb-text"><strong>6 min</strong> trot Z1 + <strong>éducatifs 5 min</strong> + <strong>2 strides progressives</strong> vers 3:44/km</div>
-            </div>
-            <div class="sb-section">
-              <div class="sb-label sbl-main">◆ Corps — 8 × 2' / 2' récup</div>
+            <div class="sb-section"><div class="sb-label sbl-note">◆ Legs + Abdos · RPE cibles</div>
               <table class="interval-table">
-                <tr><th>Reps</th><th>Durée</th><th>Allure</th><th>Intention</th><th>Récup</th></tr>
-                <tr><td>1–2</td><td>2'</td><td><span class="pace-chip">3:44/km</span></td><td>Entrée</td><td>2' trot</td></tr>
-                <tr><td>3–5</td><td>2'</td><td><span class="pace-chip">3:44/km</span></td><td>Bloc central</td><td>2' trot</td></tr>
-                <tr><td>6–8</td><td>2'</td><td><span class="pace-chip">3:44/km</span></td><td>Finir fort</td><td>—</td></tr>
+                <tr><th>Exercice</th><th>Séries × Reps</th><th>Charge</th><th>RPE</th></tr>
+                <tr><td>RDL unilatéral KB</td><td>4 × 8 chaque</td><td>KB 24 kg</td><td>7/10</td></tr>
+                <tr><td>Step-up KB</td><td>3 × 10 chaque</td><td>KB 24 kg × 2</td><td>7/10</td></tr>
+                <tr><td>Nordic curl</td><td>3 × 6</td><td>Poids corps</td><td>8/10</td></tr>
+                <tr><td>Mollet excentrique</td><td>3 × 12 chaque</td><td>Poids corps</td><td>7/10</td></tr>
+                <tr><td>Clamshell élastique</td><td>3 × 15 chaque</td><td>Élastique rouge</td><td>5/10</td></tr>
+                <tr><td>Relevé jambes suspendu</td><td>3 × 10</td><td>Barre + sangles</td><td>7/10</td></tr>
+                <tr><td>Russian twist</td><td>3 × 20</td><td>KB 12 kg</td><td>6/10</td></tr>
               </table>
-              <div class="note-box"><strong>Tapis :</strong> 16.1 km/h. Si tu ne tiens pas les 2' → 14 × 1' / 1' récup (même bénéfice).
-Sensation correcte : souffle difficile, jambes qui brûlent après rep 5.</div>
+              <div class="note-box">Legs lundi = jambes fraîches post-repos. RDL unilateral = ischio + stabilisateur cheville → protection directe pour le run. Nordic curl RPE 8 = normal, c'est l'exercice le plus dur du programme — c'est voulu.</div>
             </div>
-            <div class="sb-section">
-              <div class="sb-label sbl-cool">◆ Retour au calme · 10 min</div>
-              <div class="sb-text"><strong>7 min</strong> trot Z1 + étirements + excentrique mollets</div>
+            <div class="retour-section"><div class="retour-label">📝 Mon retour</div><textarea class="retour-textarea" id="r-s01-lun-c" placeholder="Charges tenues, sensations, points faibles..." oninput="autoSave('s01-lun-c',this.value)"></textarea><div style="display:flex;align-items:center"><button class="retour-save" onclick="saveRetour('s01-lun-c')">Sauvegarder</button><span class="retour-saved" id="saved-s01-lun-c">✓ Sauvegardé</span></div></div>
+          </div>
+        </div>
+
+        <!-- MAR : Run sprints + foncier -->
+        <div class="session-card">
+          <div class="sc-header" onclick="toggleCard(this)">
+            <span class="sc-day">MAR</span><span class="sc-type t-run">Run · Vitesse</span>
+            <span class="sc-title">45' EF + 5 × 10" sprints</span><span class="sc-meta">50'</span><span class="sc-chevron">▾</span>
+          </div>
+          <div class="sc-body">
+            <div class="sb-section"><div class="sb-label sbl-warm">◆ Échauffement · 10 min</div>
+              <div class="sb-text"><strong>8 min</strong> trot Z1 (FC &lt;130)
+<strong>Éducatifs 2 min :</strong> montées genoux + talons-fesses</div>
             </div>
-            <div class="sb-section">
-              <div class="sb-label sbl-recup">◆ Récupération</div>
+            <div class="sb-section"><div class="sb-label sbl-main">◆ Corps de séance</div>
+              <div class="sb-text"><strong>45 min EF @ 5:40–6:00/km</strong> · FC 128–148
+Conversation possible tout le long.
+
+<strong>5 × 10" sprints</strong> dispersés dans la séance · récup marche 1 min entre chaque
+Donner tout sur 10 secondes — activation des fibres rapides.
+Pas d'allure fixe : 100% effort sur 10".</div>
+              <div class="note-box">Les sprints de 10" activent les fibres musculaires rapides sans créer de fatigue lactique. C'est du recrutement neuromusculaire pur. Échauffez-vous avec des gammes avant chaque sprint.</div>
+            </div>
+            <div class="sb-section"><div class="sb-label sbl-cool">◆ Retour au calme · 5 min</div>
+              <div class="sb-text">Trot 3 min Z1 + étirements mollets + quadriceps debout</div>
+            </div>
+            <div class="retour-section"><div class="retour-label">📝 Mon retour</div><textarea class="retour-textarea" id="r-s01-mar" placeholder="Sensations sur les sprints, allure EF tenue..." oninput="autoSave('s01-mar',this.value)"></textarea><div style="display:flex;align-items:center"><button class="retour-save" onclick="saveRetour('s01-mar')">Sauvegarder</button><span class="retour-saved" id="saved-s01-mar">✓ Sauvegardé</span></div></div>
+          </div>
+        </div>
+
+        <!-- MER : Muscu A Push -->
+        <div class="session-card">
+          <div class="sc-header" onclick="toggleCard(this)">
+            <span class="sc-day">MER</span><span class="sc-type t-muscu-a">Push · A</span>
+            <span class="sc-title">Routine A — Push + Abdos · 8h30</span><span class="sc-meta">25'</span><span class="sc-chevron">▾</span>
+          </div>
+          <div class="sc-body">
+            <div class="sb-section"><div class="sb-label sbl-note">◆ Push + Abdos · RPE cibles</div>
+              <table class="interval-table">
+                <tr><th>Exercice</th><th>Séries × Reps</th><th>Charge</th><th>RPE</th></tr>
+                <tr><td>Développé couché barre</td><td>4 × 6</td><td>75–80 kg</td><td>7/10</td></tr>
+                <tr><td>Dips lestés ceinture</td><td>3 × 8</td><td>+10–15 kg</td><td>7/10</td></tr>
+                <tr><td>Élévations latérales DB</td><td>3 × 12</td><td>10 kg</td><td>6/10</td></tr>
+                <tr><td>Arnold press DB</td><td>3 × 10</td><td>17 kg</td><td>7/10</td></tr>
+                <tr><td>Pompes prises serrées</td><td>3 × 12</td><td>Poids corps</td><td>6/10</td></tr>
+                <tr><td>Hollow body hold</td><td>3 × 30"</td><td>—</td><td>6/10</td></tr>
+                <tr><td>Ab wheel rollout</td><td>3 × 10</td><td>Depuis genoux</td><td>7/10</td></tr>
+              </table>
+              <div class="note-box">Bench à 75–80 kg = ~75% de ton 3RM. Zone force-hypertrophie sans détruire les épaules pour le run de l'après-midi. Si tu te sens bien → 80 kg. Si jambes lourdes de la veille → 75 kg.</div>
+            </div>
+            <div class="retour-section"><div class="retour-label">📝 Mon retour</div><textarea class="retour-textarea" id="r-s01-mer-a" placeholder="Charges tenues, RPE ressenti, points forts/faibles..." oninput="autoSave('s01-mer-a',this.value)"></textarea><div style="display:flex;align-items:center"><button class="retour-save" onclick="saveRetour('s01-mer-a')">Sauvegarder</button><span class="retour-saved" id="saved-s01-mer-a">✓ Sauvegardé</span></div></div>
+          </div>
+        </div>
+
+        <!-- JEU : Run spécifique 10k -->
+        <div class="session-card">
+          <div class="sc-header" onclick="toggleCard(this)">
+            <span class="sc-day">JEU</span><span class="sc-type t-run">Run · Allure 10k</span>
+            <span class="sc-title">5 × 4' @ 4:30/km + EF</span><span class="sc-meta">55'</span><span class="sc-chevron">▾</span>
+          </div>
+          <div class="sc-body">
+            <div class="sb-section"><div class="sb-label sbl-warm">◆ Échauffement · 15 min</div>
+              <div class="sb-text"><strong>10 min</strong> trot Z1 (FC &lt;130)
+<strong>Éducatifs 3 min :</strong> montées genoux + talons-fesses + jambes tendues
+<strong>2 accélérations 30"</strong> progressives vers 4:30/km · récup marche 60"</div>
+            </div>
+            <div class="sb-section"><div class="sb-label sbl-main">◆ Corps — 5 × 4' @ allure cible</div>
+              <table class="interval-table">
+                <tr><th>Rep</th><th>Durée</th><th>Allure</th><th>FC cible</th><th>Récup</th></tr>
+                <tr><td>1–2</td><td>4'</td><td><span class="pace-chip">4:30/km</span></td><td><span class="fc-chip">162–170</span></td><td>1'30" trot</td></tr>
+                <tr><td>3–4</td><td>4'</td><td><span class="pace-chip">4:30/km</span></td><td><span class="fc-chip">165–172</span></td><td>1'30" trot</td></tr>
+                <tr><td>5</td><td>4'</td><td><span class="pace-chip">4:30/km</span></td><td><span class="fc-chip">165–174</span></td><td>—</td></tr>
+              </table>
+              <div class="note-box">C'est l'allure que tu devras tenir 45 min le 21 juin. 4 min ça semble court — c'est voulu en S1. L'objectif est de familiariser le corps avec la sensation. Récup en trot lent, pas en marche.</div>
+            </div>
+            <div class="sb-section"><div class="sb-label sbl-main">◆ Après les intervalles</div>
+              <div class="sb-text"><strong>10 min EF</strong> @ 5:40/km pour finir · FC redescend &lt;145</div>
+            </div>
+            <div class="sb-section"><div class="sb-label sbl-cool">◆ Retour au calme · 10 min</div>
+              <div class="sb-text"><strong>5 min</strong> trot Z1 + étirements : ischios 30"×2 · mollets excentriques 10 reps · quadriceps 30"×2</div>
+            </div>
+            <div class="sb-section"><div class="sb-label sbl-recup">◆ Récupération</div>
               <div class="recup-tools">
-                <span class="rtool">🥶 Boule froide · quadriceps + mollets</span>
-                <span class="rtool">⚡ Compex récup · 20 min</span>
+                <span class="rtool">🥶 Boule froide · quadriceps + mollets · immédiat · 5 min</span>
+                <span class="rtool">👢 Bottes presso · 20 min soir</span>
               </div>
             </div>
+            <div class="retour-section"><div class="retour-label">📝 Mon retour</div><textarea class="retour-textarea" id="r-s01-jeu" placeholder="Allure tenue ? Combien de reps ? Sensations..." oninput="autoSave('s01-jeu',this.value)"></textarea><div style="display:flex;align-items:center"><button class="retour-save" onclick="saveRetour('s01-jeu')">Sauvegarder</button><span class="retour-saved" id="saved-s01-jeu">✓ Sauvegardé</span></div></div>
           </div>
         </div>
 
+        <!-- VEN : Muscu B Pull + Nage -->
         <div class="session-card">
           <div class="sc-header" onclick="toggleCard(this)">
-            <span class="sc-day">MER</span><span class="sc-type t-run">Run · Foncier</span>
-            <span class="sc-title">Foncier Z2 — 50 min</span>
-            <span class="sc-meta">50' · 8.5km</span><span class="sc-chevron">▾</span>
+            <span class="sc-day">VEN</span><span class="sc-type t-muscu-b">Pull · B</span>
+            <span class="sc-title">Routine B — Pull + Abdos · 8h30</span><span class="sc-meta">25'</span><span class="sc-chevron">▾</span>
           </div>
           <div class="sc-body">
-            <div class="sb-section">
-              <div class="sb-label sbl-main">◆ Corps de séance</div>
-              <div class="sb-text"><strong>50 min @ 5:40–6:00/km</strong> · FC 128–148
-Sorti d'une VMA hier → raideur les 10 premières minutes = normal.
-FC plus haute qu'habituellement = fatigue résiduelle normale.</div>
-            </div>
-          </div>
-        </div>
-
-        <div class="session-card">
-          <div class="sc-header" onclick="toggleCard(this)">
-            <span class="sc-day">JEU</span><span class="sc-type t-run">Run · Seuil</span>
-            <span class="sc-title">Seuil 3 × 10' + Muscu B soir</span>
-            <span class="sc-meta">55' + 22' soir</span><span class="sc-chevron">▾</span>
-          </div>
-          <div class="sc-body">
-            <div class="sb-section">
-              <div class="sb-label sbl-warm">◆ Échauffement · 13 min</div>
-              <div class="sb-text"><strong>8 min</strong> trot Z1 + éducatifs + 2 accélérations vers allure seuil</div>
-            </div>
-            <div class="sb-section">
-              <div class="sb-label sbl-main">◆ Corps — 3 × 10' @ seuil</div>
+            <div class="sb-section"><div class="sb-label sbl-note">◆ Pull + Abdos · RPE cibles</div>
               <table class="interval-table">
-                <tr><th>Bloc</th><th>Durée</th><th>Allure</th><th>FC</th><th>Récup</th></tr>
-                <tr><td>Rep 1</td><td>10'</td><td><span class="pace-chip">4:47/km</span></td><td><span class="fc-chip">155–163</span></td><td>3' trot</td></tr>
-                <tr><td>Rep 2</td><td>10'</td><td><span class="pace-chip">4:47/km</span></td><td><span class="fc-chip">158–165</span></td><td>3' trot</td></tr>
-                <tr><td>Rep 3</td><td>10'</td><td><span class="pace-chip">4:47/km</span></td><td><span class="fc-chip">160–168</span></td><td>—</td></tr>
+                <tr><th>Exercice</th><th>Séries × Reps</th><th>Charge</th><th>RPE</th></tr>
+                <tr><td>Tractions pronation</td><td>4 × 6</td><td>+5–10 kg ceinture</td><td>7/10</td></tr>
+                <tr><td>Tirage horizontal TRX</td><td>3 × 12</td><td>Corps ~45°</td><td>6/10</td></tr>
+                <tr><td>Face pull élastique</td><td>3 × 15</td><td>Élastique rouge</td><td>5/10</td></tr>
+                <tr><td>Curl biceps DB</td><td>3 × 10</td><td>17 kg</td><td>7/10</td></tr>
+                <tr><td>Rotation externe allongé</td><td>3 × 15 chaque</td><td>DB 5 kg</td><td>5/10</td></tr>
+                <tr><td>Pallof press</td><td>3 × 12 chaque</td><td>Élastique violet</td><td>6/10</td></tr>
+                <tr><td>Crunch bicycle lent</td><td>3 × 16</td><td>—</td><td>6/10</td></tr>
               </table>
+              <div class="note-box">Pull vendredi matin avant la nage = timing parfait. Les dorsaux et les rotateurs d'épaule activés le matin facilitent directement le geste crawl en piscine. Face pull + rotation externe = prévention épaule natation.</div>
             </div>
-            <div class="sb-section">
-              <div class="sb-label sbl-cool">◆ Retour au calme · 8 min</div>
-              <div class="sb-text"><strong>5 min</strong> trot Z1 + ischios + mollets excentriques</div>
-            </div>
-            <div class="sb-section">
-              <div class="sb-label sbl-note">◆ Soir — Muscu Running Routine B · 22 min</div>
-              <div class="sb-text">Voir onglet <strong>Muscu</strong> → Routine B
-RDL unilateral · Nordic curl · Step-up · Clamshell · Fentes marchées · Proprioception</div>
-              <div class="recup-tools"><span class="rtool">👢 Bottes presso · 20 min soir</span></div>
-            </div>
+            <div class="retour-section"><div class="retour-label">📝 Mon retour</div><textarea class="retour-textarea" id="r-s01-ven-b" placeholder="Tractions tenues ? Charges ? Sensations épaules..." oninput="autoSave('s01-ven-b',this.value)"></textarea><div style="display:flex;align-items:center"><button class="retour-save" onclick="saveRetour('s01-ven-b')">Sauvegarder</button><span class="retour-saved" id="saved-s01-ven-b">✓ Sauvegardé</span></div></div>
           </div>
         </div>
 
         <div class="session-card">
           <div class="sc-header" onclick="toggleCard(this)">
             <span class="sc-day">VEN</span><span class="sc-type t-swim">Nage · Technique</span>
-            <span class="sc-title">Natation éducatifs + 6×50m allure</span>
-            <span class="sc-meta">Piscine · 45'</span><span class="sc-chevron">▾</span>
+            <span class="sc-title">Natation — Éducatifs techniques</span><span class="sc-meta">Piscine · 45'</span><span class="sc-chevron">▾</span>
           </div>
           <div class="sc-body">
-            <div class="sb-section">
-              <div class="sb-label sbl-warm">◆ Échauffement · 200m</div>
-              <div class="sb-text">200m nage libre décontractée · focus placement.</div>
+            <div class="sb-section"><div class="sb-label sbl-warm">◆ Échauffement · 200m</div>
+              <div class="sb-text"><strong>100m</strong> nage libre très lente — zéro tension épaules
+<strong>4 × 25m</strong> jambes seules avec planche · récup 20"</div>
             </div>
-            <div class="sb-section">
-              <div class="sb-label sbl-main">◆ Corps de séance</div>
-              <div class="sb-text"><strong>4 × 25m</strong> éducatifs au choix (catch-up, finger drag, side kick, single arm)
-
-<strong>6 × 50m</strong> allure confortable soutenue (~75% effort) · récup 30"
-Focus : maintenir le geste technique même essoufflé.
-
-<strong>100m</strong> nage libre décontractée pour finir.</div>
+            <div class="sb-section"><div class="sb-label sbl-main">◆ Corps · TECHNIQUE PURE</div>
+              <div class="sb-text"><strong>4 × 25m</strong> Catch-up drill
+<strong>4 × 25m</strong> Breathing drill (respiration tous les 3 coups)
+<strong>4 × 50m</strong> Nage complète focus placement · récup 30"
+<strong>4 × 25m</strong> Finger drag drill</div>
+              <div class="note-box">Phase 1 = 100% technique. Si tu sors essoufflé → tu es allé trop vite. Les dorsaux et épaules ont travaillé ce matin — le geste sera plus propre cet après-midi. Voir onglet 🏊 Nage pour le détail des drills.</div>
             </div>
-            <div class="sb-section">
-              <div class="sb-label sbl-cool">◆ Retour au calme</div>
-              <div class="sb-text">100m dos crawlé ou brasse très lente.</div>
+            <div class="sb-section"><div class="sb-label sbl-cool">◆ Retour au calme</div>
+              <div class="sb-text">100m dos crawlé ou brasse très lente · décompression épaules</div>
             </div>
+            <div class="retour-section"><div class="retour-label">📝 Mon retour</div><textarea class="retour-textarea" id="r-s01-ven" placeholder="Sensations dans l'eau, drills réussis, difficultés..." oninput="autoSave('s01-ven',this.value)"></textarea><div style="display:flex;align-items:center"><button class="retour-save" onclick="saveRetour('s01-ven')">Sauvegarder</button><span class="retour-saved" id="saved-s01-ven">✓ Sauvegardé</span></div></div>
           </div>
         </div>
 
+        <!-- SAM : Repos -->
         <div class="session-card">
           <div class="sc-header" onclick="toggleCard(this)">
-            <span class="sc-day">SAM</span><span class="sc-type t-run">Run · Longue</span>
-            <span class="sc-title">Sortie longue Z2 75' + 5 strides</span>
-            <span class="sc-meta">75' · 12.5km</span><span class="sc-chevron">▾</span>
+            <span class="sc-day">SAM</span><span class="sc-type t-rest">Repos</span>
+            <span class="sc-title">Repos total</span><span class="sc-chevron">▾</span>
+          </div>
+          <div class="sc-body"><div class="sb-section"><div class="note-box">Repos avant la sortie longue de dimanche. Mobilité légère si tu veux bouger — 20 min max.</div></div></div>
+        </div>
+
+        <!-- DIM : Run longue -->
+        <div class="session-card">
+          <div class="sc-header" onclick="toggleCard(this)">
+            <span class="sc-day">DIM</span><span class="sc-type t-run">Run · Longue</span>
+            <span class="sc-title">Sortie longue 55' + EF · 2 × 5' @5:15/km</span><span class="sc-meta">55'</span><span class="sc-chevron">▾</span>
           </div>
           <div class="sc-body">
-            <div class="sb-section">
-              <div class="sb-label sbl-main">◆ Corps de séance</div>
-              <div class="sb-text"><strong>70 min @ 5:40–5:55/km</strong> · FC 130–145
-<strong>5 strides de 20"</strong> dans les 5 dernières minutes · récup 40" marche</div>
+            <div class="sb-section"><div class="sb-label sbl-warm">◆ Départ progressif</div>
+              <div class="sb-text">Départ à <strong>6:10/km</strong> les 10 premières minutes (FC &lt;130)</div>
             </div>
-            <div class="sb-section">
-              <div class="sb-label sbl-cool">◆ Retour au calme</div>
-              <div class="sb-text">Marche 5 min + étirements 10 min complets.</div>
+            <div class="sb-section"><div class="sb-label sbl-main">◆ Corps de séance</div>
+              <div class="sb-text"><strong>30 min EF</strong> @ 5:40–6:00/km · FC 128–148
+
+<strong>2 × 5' @ 5:15/km</strong> · récup 3' trot
+Allure orange = proche allure marathon · tempo confortable mais soutenu
+FC cible : <span class="fc-chip" style="display:inline">148–158</span>
+
+<strong>10 min EF</strong> pour finir · FC redescend</div>
             </div>
-            <div class="sb-section">
-              <div class="sb-label sbl-recup">◆ Récupération</div>
+            <div class="sb-section"><div class="sb-label sbl-cool">◆ Retour au calme · 15 min</div>
+              <div class="sb-text">Marche <strong>5 min</strong> + étirements complets 10 min</div>
+            </div>
+            <div class="sb-section"><div class="sb-label sbl-recup">◆ Récupération</div>
               <div class="recup-tools">
                 <span class="rtool">👢 Bottes presso · 30 min</span>
-                <span class="rtool">⚡ Électrodes Compex · récup</span>
+                <span class="rtool">🥶 Boule froide · mollets</span>
+                <span class="rtool">⚡ Électrodes Compex · récup · 20 min soir</span>
               </div>
             </div>
+            <div class="retour-section"><div class="retour-label">📝 Mon retour</div><textarea class="retour-textarea" id="r-s01-dim" placeholder="Sensations longue, blocs @5:15 tenus, fatigue..." oninput="autoSave('s01-dim',this.value)"></textarea><div style="display:flex;align-items:center"><button class="retour-save" onclick="saveRetour('s01-dim')">Sauvegarder</button><span class="retour-saved" id="saved-s01-dim">✓ Sauvegardé</span></div></div>
           </div>
         </div>
+      </div><!-- /S01 -->
 
-        <div class="session-card">
-          <div class="sc-header" onclick="toggleCard(this)">
-            <span class="sc-day">DIM</span><span class="sc-type t-bike">Bike Erg · Récup</span>
-            <span class="sc-title">Récup active Bike Erg + mobilité</span>
-            <span class="sc-meta">30'</span><span class="sc-chevron">▾</span>
-          </div>
-          <div class="sc-body">
-            <div class="sb-section">
-              <div class="sb-text"><strong>25 min</strong> bike erg · FC &lt;125 · cadence libre
-<strong>5 min</strong> mobilité hanche + dos</div>
-            </div>
-          </div>
-        </div>
-      </div><!-- /S02 -->
-
-      <!-- S03 -->
+      <!-- ═══ S02 · 26 MAI ═══ -->
       <div class="week-block">
         <div class="week-header">
-          <span class="week-num">S03</span>
-          <span class="week-title">Charge maximale</span>
-          <span class="week-badge wb-high">~35 km</span>
+          <span class="week-num">S02 · 26 Mai</span>
+          <span class="week-title">Spécifique 10k — Montée</span>
+          <span class="week-badge wb-high">Programme S6</span>
         </div>
 
         <div class="session-card">
           <div class="sc-header" onclick="toggleCard(this)">
             <span class="sc-day">LUN</span><span class="sc-type t-rest">Repos</span>
-            <span class="sc-title">Repos total</span><span class="sc-chevron">▾</span>
+            <span class="sc-title">Repos + mobilité</span><span class="sc-meta">20'</span><span class="sc-chevron">▾</span>
           </div>
-          <div class="sc-body"><div class="sb-section"><div class="note-box">Semaine de charge maximale qui arrive. Ce lundi est crucial — repos complet, pas de mobilité intense.</div></div></div>
+          <div class="sc-body"><div class="sb-section"><div class="sb-text">Mobilité 20 min : rouleau foam + hip flexor + rotation thoracique</div></div>
+            <div class="retour-section"><div class="retour-label">📝 Mon retour</div><textarea class="retour-textarea" id="r-s02-lun" placeholder="Énergie, récup de la semaine précédente..." oninput="autoSave('s02-lun',this.value)"></textarea><div style="display:flex;align-items:center"><button class="retour-save" onclick="saveRetour('s02-lun')">Sauvegarder</button><span class="retour-saved" id="saved-s02-lun">✓ Sauvegardé</span></div></div>
+          </div>
         </div>
 
         <div class="session-card">
           <div class="sc-header" onclick="toggleCard(this)">
-            <span class="sc-day">MAR</span><span class="sc-type t-run">Run · VMA</span>
-            <span class="sc-title">VMA longue 5 × 4' @ 4:06/km</span>
-            <span class="sc-meta">60' · 11km</span><span class="sc-chevron">▾</span>
+            <span class="sc-day">LUN</span><span class="sc-type t-muscu-c">Legs · C</span>
+            <span class="sc-title">Routine C — Legs + Abdos · 8h30</span><span class="sc-meta">25'</span><span class="sc-chevron">▾</span>
           </div>
           <div class="sc-body">
-            <div class="sb-section">
-              <div class="sb-label sbl-warm">◆ Échauffement · 15 min</div>
-              <div class="sb-text"><strong>8 min</strong> trot Z1 + éducatifs 5 min + 2 accélérations progressives</div>
+            <div class="sb-section"><div class="sb-label sbl-note">◆ Legs + Abdos · Progression S2</div>
+              <table class="interval-table">
+                <tr><th>Exercice</th><th>Séries × Reps</th><th>Charge</th><th>RPE</th></tr>
+                <tr><td>RDL unilatéral KB</td><td>4 × 8 chaque</td><td>KB 24 kg</td><td>7/10</td></tr>
+                <tr><td>Step-up KB</td><td>4 × 10 chaque</td><td>KB 24 kg × 2</td><td>7/10</td></tr>
+                <tr><td>Nordic curl</td><td>3 × 6</td><td>Poids corps</td><td>8/10</td></tr>
+                <tr><td>Mollet excentrique</td><td>3 × 12 chaque</td><td>+KB 12 kg</td><td>7/10</td></tr>
+                <tr><td>Clamshell élastique</td><td>3 × 15 chaque</td><td>Élastique rouge</td><td>5/10</td></tr>
+                <tr><td>Relevé jambes suspendu</td><td>3 × 12</td><td>Barre + sangles</td><td>7/10</td></tr>
+                <tr><td>Russian twist</td><td>3 × 20</td><td>KB 12 kg</td><td>7/10</td></tr>
+              </table>
             </div>
-            <div class="sb-section">
-              <div class="sb-label sbl-main">◆ Corps — 5 × 4' / 3' récup</div>
+            <div class="retour-section"><div class="retour-label">📝 Mon retour</div><textarea class="retour-textarea" id="r-s02-lun-c" placeholder="Progression vs S1 ? Charges tenues..." oninput="autoSave('s02-lun-c',this.value)"></textarea><div style="display:flex;align-items:center"><button class="retour-save" onclick="saveRetour('s02-lun-c')">Sauvegarder</button><span class="retour-saved" id="saved-s02-lun-c">✓ Sauvegardé</span></div></div>
+          </div>
+        </div>
+
+        <div class="session-card">
+          <div class="sc-header" onclick="toggleCard(this)">
+            <span class="sc-day">MAR</span><span class="sc-type t-run">Run · Vitesse</span>
+            <span class="sc-title">45' EF + 5 × 10" sprints</span><span class="sc-meta">50'</span><span class="sc-chevron">▾</span>
+          </div>
+          <div class="sc-body">
+            <div class="sb-section"><div class="sb-label sbl-main">◆ Corps de séance</div>
+              <div class="sb-text"><strong>45 min EF @ 5:40–6:00/km</strong>
+<strong>5 × 10" sprints</strong> dispersés · récup marche 1 min · 100% sur chaque sprint</div>
+            </div>
+            <div class="retour-section"><div class="retour-label">📝 Mon retour</div><textarea class="retour-textarea" id="r-s02-mar" placeholder="Sensations..." oninput="autoSave('s02-mar',this.value)"></textarea><div style="display:flex;align-items:center"><button class="retour-save" onclick="saveRetour('s02-mar')">Sauvegarder</button><span class="retour-saved" id="saved-s02-mar">✓ Sauvegardé</span></div></div>
+          </div>
+        </div>
+
+        <div class="session-card">
+          <div class="sc-header" onclick="toggleCard(this)">
+            <span class="sc-day">MER</span><span class="sc-type t-muscu-a">Push · A</span>
+            <span class="sc-title">Routine A — Push + Abdos · 8h30</span><span class="sc-meta">25'</span><span class="sc-chevron">▾</span>
+          </div>
+          <div class="sc-body">
+            <div class="sb-section"><div class="sb-label sbl-note">◆ Push + Abdos · Progression S2</div>
+              <table class="interval-table">
+                <tr><th>Exercice</th><th>Séries × Reps</th><th>Charge</th><th>RPE</th></tr>
+                <tr><td>Développé couché barre</td><td>4 × 6</td><td>77.5–82.5 kg</td><td>7/10</td></tr>
+                <tr><td>Dips lestés ceinture</td><td>3 × 8</td><td>+12.5–17.5 kg</td><td>7/10</td></tr>
+                <tr><td>Élévations latérales DB</td><td>3 × 12</td><td>10 kg</td><td>6/10</td></tr>
+                <tr><td>Arnold press DB</td><td>3 × 10</td><td>17 kg</td><td>7/10</td></tr>
+                <tr><td>Pompes prises serrées</td><td>3 × 15</td><td>Poids corps</td><td>6/10</td></tr>
+                <tr><td>Hollow body hold</td><td>3 × 35"</td><td>—</td><td>7/10</td></tr>
+                <tr><td>Ab wheel rollout</td><td>3 × 10</td><td>Depuis genoux</td><td>7/10</td></tr>
+              </table>
+              <div class="note-box">+2.5 kg sur le bench vs S1 si tu étais à RPE 6 la semaine dernière. Reste à RPE 7 — pas plus. Les épaules travaillent aussi en run : ne les cramez pas.</div>
+            </div>
+            <div class="retour-section"><div class="retour-label">📝 Mon retour</div><textarea class="retour-textarea" id="r-s02-mer-a" placeholder="Progression bench ? Sensations épaules..." oninput="autoSave('s02-mer-a',this.value)"></textarea><div style="display:flex;align-items:center"><button class="retour-save" onclick="saveRetour('s02-mer-a')">Sauvegarder</button><span class="retour-saved" id="saved-s02-mer-a">✓ Sauvegardé</span></div></div>
+          </div>
+        </div>
+
+        <div class="session-card">
+          <div class="sc-header" onclick="toggleCard(this)">
+            <span class="sc-day">JEU</span><span class="sc-type t-run">Run · Allure 10k</span>
+            <span class="sc-title">5 × 5' @ 4:30/km + EF</span><span class="sc-meta">1h05</span><span class="sc-chevron">▾</span>
+          </div>
+          <div class="sc-body">
+            <div class="sb-section"><div class="sb-label sbl-warm">◆ Échauffement · 15 min</div>
+              <div class="sb-text"><strong>10 min</strong> trot Z1 + éducatifs 3 min + 2 accélérations vers 4:30/km</div>
+            </div>
+            <div class="sb-section"><div class="sb-label sbl-main">◆ Corps — 5 × 5' @ allure cible</div>
               <table class="interval-table">
                 <tr><th>Rep</th><th>Durée</th><th>Allure</th><th>FC cible</th><th>Récup</th></tr>
-                <tr><td>1</td><td>4'</td><td><span class="pace-chip">4:06/km</span></td><td><span class="fc-chip">165–172</span></td><td>3' trot</td></tr>
-                <tr><td>2–3</td><td>4'</td><td><span class="pace-chip">4:06/km</span></td><td><span class="fc-chip">168–175</span></td><td>3' trot</td></tr>
-                <tr><td>4–5</td><td>4'</td><td><span class="pace-chip">4:06/km</span></td><td><span class="fc-chip">170–178</span></td><td>—</td></tr>
+                <tr><td>1–2</td><td>5'</td><td><span class="pace-chip">4:30/km</span></td><td><span class="fc-chip">162–170</span></td><td>2' trot</td></tr>
+                <tr><td>3–4</td><td>5'</td><td><span class="pace-chip">4:30/km</span></td><td><span class="fc-chip">165–172</span></td><td>2' trot</td></tr>
+                <tr><td>5</td><td>5'</td><td><span class="pace-chip">4:30/km</span></td><td><span class="fc-chip">167–174</span></td><td>—</td></tr>
               </table>
-              <div class="note-box">C'est la séance VMA la plus dure du bloc. Les 2 premières minutes semblent gérables — c'est à la 3e minute que ça commence. Reste dessus. Récup 3' intentionnellement longue pour tenir les 5 reps.</div>
             </div>
-            <div class="sb-section">
-              <div class="sb-label sbl-cool">◆ Retour au calme · 12 min</div>
-              <div class="sb-text"><strong>8 min</strong> trot Z1 + étirements 4 min</div>
+            <div class="sb-section"><div class="sb-label sbl-main">◆ Après les intervalles</div>
+              <div class="sb-text"><strong>10 min EF</strong> @ 5:40/km pour finir</div>
             </div>
-            <div class="sb-section">
-              <div class="sb-label sbl-recup">◆ Récupération</div>
+            <div class="sb-section"><div class="sb-label sbl-cool">◆ Retour au calme · 10 min</div>
+              <div class="sb-text"><strong>5 min</strong> trot Z1 + étirements ischios + mollets excentriques</div>
+            </div>
+            <div class="sb-section"><div class="sb-label sbl-recup">◆ Récupération</div>
               <div class="recup-tools">
-                <span class="rtool">🥶 Boule froide · immédiat · quadriceps</span>
-                <span class="rtool">👢 Bottes presso · 30 min soir</span>
+                <span class="rtool">🥶 Boule froide · immédiat · 5 min</span>
+                <span class="rtool">👢 Bottes presso · 20 min soir</span>
               </div>
             </div>
+            <div class="retour-section"><div class="retour-label">📝 Mon retour</div><textarea class="retour-textarea" id="r-s02-jeu" placeholder="5 reps tenues ? Allure tenue jusqu'au bout ?" oninput="autoSave('s02-jeu',this.value)"></textarea><div style="display:flex;align-items:center"><button class="retour-save" onclick="saveRetour('s02-jeu')">Sauvegarder</button><span class="retour-saved" id="saved-s02-jeu">✓ Sauvegardé</span></div></div>
           </div>
         </div>
 
         <div class="session-card">
           <div class="sc-header" onclick="toggleCard(this)">
-            <span class="sc-day">MER</span><span class="sc-type t-run">Run · Foncier</span>
-            <span class="sc-title">Foncier Z2 50' + 5 accélérations</span>
-            <span class="sc-meta">50' · 8.5km</span><span class="sc-chevron">▾</span>
+            <span class="sc-day">VEN</span><span class="sc-type t-muscu-b">Pull · B</span>
+            <span class="sc-title">Routine B — Pull + Abdos · 8h30</span><span class="sc-meta">25'</span><span class="sc-chevron">▾</span>
           </div>
           <div class="sc-body">
-            <div class="sb-section">
-              <div class="sb-label sbl-main">◆ Corps de séance</div>
-              <div class="sb-text"><strong>45 min @ 5:40–5:55/km</strong>
-<strong>5 accélérations de 20"</strong> dispersées dans la séance (montée vers 4:20/km puis relâchement)
-Ce sont des réveils neuromusculaires — pas des sprints.</div>
-            </div>
-          </div>
-        </div>
-
-        <div class="session-card">
-          <div class="sc-header" onclick="toggleCard(this)">
-            <span class="sc-day">JEU</span><span class="sc-type t-run">Run · Allure cible</span>
-            <span class="sc-title">Allure cible 3 × 12' @ 4:30/km + Muscu A</span>
-            <span class="sc-meta">60' + 25' soir</span><span class="sc-chevron">▾</span>
-          </div>
-          <div class="sc-body">
-            <div class="sb-section">
-              <div class="sb-label sbl-warm">◆ Échauffement · 15 min</div>
-              <div class="sb-text"><strong>8 min</strong> Z1 + éducatifs 5 min + 2 accélérations progressives vers 4:32/km</div>
-            </div>
-            <div class="sb-section">
-              <div class="sb-label sbl-main">◆ Corps — 3 × 12' @ allure cible</div>
+            <div class="sb-section"><div class="sb-label sbl-note">◆ Pull + Abdos · Progression S2</div>
               <table class="interval-table">
-                <tr><th>Bloc</th><th>Durée</th><th>Allure</th><th>FC</th><th>Récup</th></tr>
-                <tr><td>Rep 1</td><td>12'</td><td><span class="pace-chip">4:32/km</span></td><td><span class="fc-chip">160–168</span></td><td>3' trot</td></tr>
-                <tr><td>Rep 2</td><td>12'</td><td><span class="pace-chip">4:30/km</span></td><td><span class="fc-chip">162–170</span></td><td>3' trot</td></tr>
-                <tr><td>Rep 3</td><td>12'</td><td><span class="pace-chip">4:30/km</span></td><td><span class="fc-chip">163–172</span></td><td>—</td></tr>
+                <tr><th>Exercice</th><th>Séries × Reps</th><th>Charge</th><th>RPE</th></tr>
+                <tr><td>Tractions pronation</td><td>4 × 7</td><td>+5–10 kg ceinture</td><td>7/10</td></tr>
+                <tr><td>Tirage horizontal TRX</td><td>3 × 12</td><td>Corps ~40°</td><td>7/10</td></tr>
+                <tr><td>Face pull élastique</td><td>3 × 15</td><td>Élastique rouge</td><td>5/10</td></tr>
+                <tr><td>Curl biceps DB</td><td>3 × 10</td><td>17 kg</td><td>7/10</td></tr>
+                <tr><td>Rotation externe allongé</td><td>3 × 15 chaque</td><td>DB 5 kg</td><td>5/10</td></tr>
+                <tr><td>Pallof press</td><td>3 × 12 chaque</td><td>Élastique violet</td><td>6/10</td></tr>
+                <tr><td>Crunch bicycle lent</td><td>3 × 16</td><td>—</td><td>6/10</td></tr>
               </table>
-              <div class="note-box">C'est la séance la plus spécifique du bloc. 3×12' = 36 minutes à allure course. Tu cours exactement à l'allure que tu devras tenir 45 minutes le jour J.</div>
             </div>
-            <div class="sb-section">
-              <div class="sb-label sbl-cool">◆ Retour au calme · 8 min</div>
-              <div class="sb-text"><strong>5 min</strong> trot Z1 + étirements</div>
+            <div class="retour-section"><div class="retour-label">📝 Mon retour</div><textarea class="retour-textarea" id="r-s02-ven-b" placeholder="Tractions +1 rep vs S1 ? Sensations..." oninput="autoSave('s02-ven-b',this.value)"></textarea><div style="display:flex;align-items:center"><button class="retour-save" onclick="saveRetour('s02-ven-b')">Sauvegarder</button><span class="retour-saved" id="saved-s02-ven-b">✓ Sauvegardé</span></div></div>
+          </div>
+        </div>
+
+        <div class="session-card">
+          <div class="sc-header" onclick="toggleCard(this)">
+            <span class="sc-day">VEN</span><span class="sc-type t-swim">Nage · Technique</span>
+            <span class="sc-title">Natation éducatifs + 6×50m allure</span><span class="sc-meta">Piscine · 45'</span><span class="sc-chevron">▾</span>
+          </div>
+          <div class="sc-body">
+            <div class="sb-section"><div class="sb-label sbl-main">◆ Corps de séance</div>
+              <div class="sb-text"><strong>4 × 25m</strong> éducatifs au choix (catch-up, finger drag, side kick, single arm)
+<strong>6 × 50m</strong> allure confortable soutenue (~75%) · récup 30"
+Focus : maintenir le geste technique même essoufflé.
+<strong>100m</strong> nage libre décontractée pour finir.</div>
             </div>
-            <div class="sb-section">
-              <div class="sb-label sbl-note">◆ Soir — Muscu Routine A</div>
-              <div class="sb-text">Voir onglet Muscu → Routine A</div>
-              <div class="recup-tools"><span class="rtool">👢 Bottes presso · 20 min soir</span></div>
+            <div class="retour-section"><div class="retour-label">📝 Mon retour</div><textarea class="retour-textarea" id="r-s02-ven" placeholder="Sensations dans l'eau, amélioration vs S1..." oninput="autoSave('s02-ven',this.value)"></textarea><div style="display:flex;align-items:center"><button class="retour-save" onclick="saveRetour('s02-ven')">Sauvegarder</button><span class="retour-saved" id="saved-s02-ven">✓ Sauvegardé</span></div></div>
+          </div>
+        </div>
+
+        <div class="session-card">
+          <div class="sc-header" onclick="toggleCard(this)">
+            <span class="sc-day">SAM</span><span class="sc-type t-rest">Repos</span>
+            <span class="sc-title">Repos total</span><span class="sc-chevron">▾</span>
+          </div>
+          <div class="sc-body"><div class="sb-section"><div class="note-box">Repos avant la longue de dimanche.</div></div></div>
+        </div>
+
+        <div class="session-card">
+          <div class="sc-header" onclick="toggleCard(this)">
+            <span class="sc-day">DIM</span><span class="sc-type t-run">Run · Longue</span>
+            <span class="sc-title">Sortie longue 55' + 3 × 5' @5:15/km</span><span class="sc-meta">1h05</span><span class="sc-chevron">▾</span>
+          </div>
+          <div class="sc-body">
+            <div class="sb-section"><div class="sb-label sbl-main">◆ Corps de séance</div>
+              <div class="sb-text"><strong>30 min EF</strong> @ 5:40–6:00/km
+
+<strong>3 × 5' @ 5:15/km</strong> · récup 2' trot
+FC cible : <span class="fc-chip" style="display:inline">148–158</span>
+
+<strong>10 min EF</strong> pour finir</div>
             </div>
+            <div class="sb-section"><div class="sb-label sbl-recup">◆ Récupération</div>
+              <div class="recup-tools">
+                <span class="rtool">👢 Bottes presso · 30 min</span>
+                <span class="rtool">🥶 Boule froide · mollets</span>
+              </div>
+            </div>
+            <div class="retour-section"><div class="retour-label">📝 Mon retour</div><textarea class="retour-textarea" id="r-s02-dim" placeholder="Blocs @5:15 tenus ? Fatigue en fin..." oninput="autoSave('s02-dim',this.value)"></textarea><div style="display:flex;align-items:center"><button class="retour-save" onclick="saveRetour('s02-dim')">Sauvegarder</button><span class="retour-saved" id="saved-s02-dim">✓ Sauvegardé</span></div></div>
+          </div>
+        </div>
+      </div><!-- /S02 -->
+
+      <!-- ═══ S03 · 02 JUIN ═══ -->
+      <div class="week-block">
+        <div class="week-header">
+          <span class="week-num">S03 · 02 Juin</span>
+          <span class="week-title">Spécifique 10k — Pic</span>
+          <span class="week-badge wb-high">Programme S7</span>
+        </div>
+
+        <div class="session-card">
+          <div class="sc-header" onclick="toggleCard(this)">
+            <span class="sc-day">LUN</span><span class="sc-type t-rest">Repos</span>
+            <span class="sc-title">Repos + mobilité</span><span class="sc-meta">20'</span><span class="sc-chevron">▾</span>
+          </div>
+          <div class="sc-body"><div class="sb-section"><div class="sb-text">Mobilité 20 min complète.</div></div>
+            <div class="retour-section"><div class="retour-label">📝 Mon retour</div><textarea class="retour-textarea" id="r-s03-lun" placeholder="Énergie en début de semaine de pic..." oninput="autoSave('s03-lun',this.value)"></textarea><div style="display:flex;align-items:center"><button class="retour-save" onclick="saveRetour('s03-lun')">Sauvegarder</button><span class="retour-saved" id="saved-s03-lun">✓ Sauvegardé</span></div></div>
+          </div>
+        </div>
+
+        <div class="session-card">
+          <div class="sc-header" onclick="toggleCard(this)">
+            <span class="sc-day">LUN</span><span class="sc-type t-muscu-c">Legs · C</span>
+            <span class="sc-title">Routine C — Legs + Abdos · 8h30</span><span class="sc-meta">25'</span><span class="sc-chevron">▾</span>
+          </div>
+          <div class="sc-body">
+            <div class="sb-section"><div class="sb-label sbl-note">◆ Legs + Abdos · Progression S3</div>
+              <table class="interval-table">
+                <tr><th>Exercice</th><th>Séries × Reps</th><th>Charge</th><th>RPE</th></tr>
+                <tr><td>RDL unilatéral KB</td><td>4 × 8 chaque</td><td>KB 24 kg</td><td>7/10</td></tr>
+                <tr><td>Step-up KB</td><td>4 × 10 chaque</td><td>KB 24 kg × 2</td><td>8/10</td></tr>
+                <tr><td>Nordic curl</td><td>4 × 6</td><td>Poids corps</td><td>8/10</td></tr>
+                <tr><td>Mollet excentrique</td><td>3 × 12 chaque</td><td>+KB 12 kg</td><td>7/10</td></tr>
+                <tr><td>Clamshell élastique</td><td>3 × 15 chaque</td><td>Élastique rouge</td><td>5/10</td></tr>
+                <tr><td>Relevé jambes suspendu</td><td>3 × 12</td><td>Barre + sangles</td><td>8/10</td></tr>
+                <tr><td>Russian twist</td><td>3 × 20</td><td>KB 16 kg</td><td>7/10</td></tr>
+              </table>
+              <div class="note-box">Semaine de pic — charge muscu légèrement augmentée mais RPE 8 max. Nordic curl passe à 4 séries. C'est la dernière semaine chargée avant l'assimilation S4.</div>
+            </div>
+            <div class="retour-section"><div class="retour-label">📝 Mon retour</div><textarea class="retour-textarea" id="r-s03-lun-c" placeholder="Nordic 4 séries tenues ? KB 16 kg sur russian twist..." oninput="autoSave('s03-lun-c',this.value)"></textarea><div style="display:flex;align-items:center"><button class="retour-save" onclick="saveRetour('s03-lun-c')">Sauvegarder</button><span class="retour-saved" id="saved-s03-lun-c">✓ Sauvegardé</span></div></div>
+          </div>
+        </div>
+
+        <div class="session-card">
+          <div class="sc-header" onclick="toggleCard(this)">
+            <span class="sc-day">MAR</span><span class="sc-type t-run">Run · Vitesse</span>
+            <span class="sc-title">45' EF + 5 × 10" sprints</span><span class="sc-meta">50'</span><span class="sc-chevron">▾</span>
+          </div>
+          <div class="sc-body">
+            <div class="sb-section"><div class="sb-label sbl-main">◆ Corps</div>
+              <div class="sb-text"><strong>45 min EF @ 5:40–6:00/km</strong>
+<strong>5 × 10" sprints</strong> dispersés · récup marche 1 min · 100% sur chaque sprint</div>
+            </div>
+            <div class="retour-section"><div class="retour-label">📝 Mon retour</div><textarea class="retour-textarea" id="r-s03-mar" placeholder="Sensations..." oninput="autoSave('s03-mar',this.value)"></textarea><div style="display:flex;align-items:center"><button class="retour-save" onclick="saveRetour('s03-mar')">Sauvegarder</button><span class="retour-saved" id="saved-s03-mar">✓ Sauvegardé</span></div></div>
+          </div>
+        </div>
+
+        <div class="session-card">
+          <div class="sc-header" onclick="toggleCard(this)">
+            <span class="sc-day">MER</span><span class="sc-type t-muscu-a">Push · A</span>
+            <span class="sc-title">Routine A — Push + Abdos · 8h30</span><span class="sc-meta">25'</span><span class="sc-chevron">▾</span>
+          </div>
+          <div class="sc-body">
+            <div class="sb-section"><div class="sb-label sbl-note">◆ Push + Abdos · Progression S3</div>
+              <table class="interval-table">
+                <tr><th>Exercice</th><th>Séries × Reps</th><th>Charge</th><th>RPE</th></tr>
+                <tr><td>Développé couché barre</td><td>4 × 6</td><td>80–85 kg</td><td>7/10</td></tr>
+                <tr><td>Dips lestés ceinture</td><td>4 × 8</td><td>+15–20 kg</td><td>8/10</td></tr>
+                <tr><td>Élévations latérales DB</td><td>3 × 12</td><td>12 kg</td><td>7/10</td></tr>
+                <tr><td>Arnold press DB</td><td>3 × 10</td><td>17 kg</td><td>7/10</td></tr>
+                <tr><td>Pompes prises serrées</td><td>3 × 15</td><td>Poids corps</td><td>7/10</td></tr>
+                <tr><td>Hollow body hold</td><td>3 × 40"</td><td>—</td><td>7/10</td></tr>
+                <tr><td>Ab wheel rollout</td><td>3 × 12</td><td>Depuis genoux</td><td>8/10</td></tr>
+              </table>
+            </div>
+            <div class="retour-section"><div class="retour-label">📝 Mon retour</div><textarea class="retour-textarea" id="r-s03-mer-a" placeholder="Bench à 80-85 kg tenu ? Dips lestés..." oninput="autoSave('s03-mer-a',this.value)"></textarea><div style="display:flex;align-items:center"><button class="retour-save" onclick="saveRetour('s03-mer-a')">Sauvegarder</button><span class="retour-saved" id="saved-s03-mer-a">✓ Sauvegardé</span></div></div>
+          </div>
+        </div>
+
+        <div class="session-card">
+          <div class="sc-header" onclick="toggleCard(this)">
+            <span class="sc-day">JEU</span><span class="sc-type t-run">Run · Allure 10k</span>
+            <span class="sc-title">5 × 6' @ 4:30/km + EF</span><span class="sc-meta">1h15</span><span class="sc-chevron">▾</span>
+          </div>
+          <div class="sc-body">
+            <div class="sb-section"><div class="sb-label sbl-warm">◆ Échauffement · 15 min</div>
+              <div class="sb-text"><strong>10 min</strong> trot Z1 + éducatifs 3 min + 2 accélérations vers 4:30/km</div>
+            </div>
+            <div class="sb-section"><div class="sb-label sbl-main">◆ Corps — 5 × 6' @ allure cible</div>
+              <table class="interval-table">
+                <tr><th>Rep</th><th>Durée</th><th>Allure</th><th>FC cible</th><th>Récup</th></tr>
+                <tr><td>1–2</td><td>6'</td><td><span class="pace-chip">4:30/km</span></td><td><span class="fc-chip">162–170</span></td><td>2'30" trot</td></tr>
+                <tr><td>3–4</td><td>6'</td><td><span class="pace-chip">4:30/km</span></td><td><span class="fc-chip">165–173</span></td><td>2'30" trot</td></tr>
+                <tr><td>5</td><td>6'</td><td><span class="pace-chip">4:30/km</span></td><td><span class="fc-chip">167–175</span></td><td>—</td></tr>
+              </table>
+              <div class="note-box">5×6' = 30 minutes à allure course. Si tu tiens ça, le sub45 est dans tes jambes. C'est la séance clé du Bloc 1. Récup 2'30" en trot — pas en marche.</div>
+            </div>
+            <div class="sb-section"><div class="sb-label sbl-main">◆ Après</div>
+              <div class="sb-text"><strong>10 min EF</strong> pour finir</div>
+            </div>
+            <div class="sb-section"><div class="sb-label sbl-cool">◆ Retour au calme · 10 min</div>
+              <div class="sb-text"><strong>5 min</strong> trot Z1 + étirements complets</div>
+            </div>
+            <div class="sb-section"><div class="sb-label sbl-recup">◆ Récupération — Priorité</div>
+              <div class="recup-tools">
+                <span class="rtool">🥶 Boule froide · immédiat · 5 min</span>
+                <span class="rtool">👢 Bottes presso · 30 min</span>
+                <span class="rtool">⚡ Compex récup · 20 min soir</span>
+              </div>
+            </div>
+            <div class="retour-section"><div class="retour-label">📝 Mon retour</div><textarea class="retour-textarea" id="r-s03-jeu" placeholder="5×6' tenus ? C'est LA séance clé — détaille..." oninput="autoSave('s03-jeu',this.value)"></textarea><div style="display:flex;align-items:center"><button class="retour-save" onclick="saveRetour('s03-jeu')">Sauvegarder</button><span class="retour-saved" id="saved-s03-jeu">✓ Sauvegardé</span></div></div>
+          </div>
+        </div>
+
+        <div class="session-card">
+          <div class="sc-header" onclick="toggleCard(this)">
+            <span class="sc-day">VEN</span><span class="sc-type t-muscu-b">Pull · B</span>
+            <span class="sc-title">Routine B — Pull + Abdos · 8h30</span><span class="sc-meta">25'</span><span class="sc-chevron">▾</span>
+          </div>
+          <div class="sc-body">
+            <div class="sb-section"><div class="sb-label sbl-note">◆ Pull + Abdos · Progression S3</div>
+              <table class="interval-table">
+                <tr><th>Exercice</th><th>Séries × Reps</th><th>Charge</th><th>RPE</th></tr>
+                <tr><td>Tractions pronation</td><td>4 × 8</td><td>+5–10 kg ceinture</td><td>8/10</td></tr>
+                <tr><td>Tirage horizontal TRX</td><td>3 × 12</td><td>Corps ~35°</td><td>7/10</td></tr>
+                <tr><td>Face pull élastique</td><td>3 × 15</td><td>Élastique rouge</td><td>5/10</td></tr>
+                <tr><td>Curl biceps DB</td><td>3 × 10</td><td>17 kg</td><td>7/10</td></tr>
+                <tr><td>Rotation externe allongé</td><td>3 × 15 chaque</td><td>DB 5 kg</td><td>5/10</td></tr>
+                <tr><td>Pallof press</td><td>3 × 12 chaque</td><td>Élastique violet</td><td>7/10</td></tr>
+                <tr><td>Crunch bicycle lent</td><td>3 × 20</td><td>—</td><td>7/10</td></tr>
+              </table>
+            </div>
+            <div class="retour-section"><div class="retour-label">📝 Mon retour</div><textarea class="retour-textarea" id="r-s03-ven-b" placeholder="Tractions 4×8 tenues ? Épaules OK après les 5×6' de jeudi..." oninput="autoSave('s03-ven-b',this.value)"></textarea><div style="display:flex;align-items:center"><button class="retour-save" onclick="saveRetour('s03-ven-b')">Sauvegarder</button><span class="retour-saved" id="saved-s03-ven-b">✓ Sauvegardé</span></div></div>
           </div>
         </div>
 
         <div class="session-card">
           <div class="sc-header" onclick="toggleCard(this)">
             <span class="sc-day">VEN</span><span class="sc-type t-swim">Nage · Endurance</span>
-            <span class="sc-title">Natation — Test 800m continu</span>
-            <span class="sc-meta">Piscine · 50'</span><span class="sc-chevron">▾</span>
+            <span class="sc-title">Natation — Test 800m continu</span><span class="sc-meta">Piscine · 50'</span><span class="sc-chevron">▾</span>
           </div>
           <div class="sc-body">
-            <div class="sb-section">
-              <div class="sb-label sbl-main">◆ Corps de séance</div>
+            <div class="sb-section"><div class="sb-label sbl-main">◆ Corps de séance</div>
               <div class="sb-text"><strong>4 × 25m</strong> éducatifs au choix
-
 <strong>800m continu</strong> → NOTER LE TEMPS ET LES SENSATIONS
-Allure confortable, pas à fond. Première mesure de référence pour le Bloc 2.
-
+Allure confortable — première mesure de référence pour le Bloc 2.
 <strong>4 × 25m</strong> technique pour finir</div>
-              <div class="note-box">Note perso : _____ min _____ sec · Sensations : _____</div>
+              <div class="note-box">Note perso : _____ min _____ sec · Nombre d'arrêts : _____</div>
             </div>
+            <div class="retour-section"><div class="retour-label">📝 Mon retour</div><textarea class="retour-textarea" id="r-s03-ven" placeholder="Temps 800m, sensations, arrêts éventuels..." oninput="autoSave('s03-ven',this.value)"></textarea><div style="display:flex;align-items:center"><button class="retour-save" onclick="saveRetour('s03-ven')">Sauvegarder</button><span class="retour-saved" id="saved-s03-ven">✓ Sauvegardé</span></div></div>
           </div>
         </div>
 
         <div class="session-card">
           <div class="sc-header" onclick="toggleCard(this)">
-            <span class="sc-day">SAM</span><span class="sc-type t-run">Run · Longue</span>
-            <span class="sc-title">Sortie longue 85' avec progression finale</span>
-            <span class="sc-meta">85' · 14.5km</span><span class="sc-chevron">▾</span>
+            <span class="sc-day">SAM</span><span class="sc-type t-rest">Repos</span>
+            <span class="sc-title">Repos total</span><span class="sc-chevron">▾</span>
+          </div>
+          <div class="sc-body"><div class="sb-section"><div class="note-box">Après la semaine la plus chargée du Bloc 1 — repos complet samedi.</div></div></div>
+        </div>
+
+        <div class="session-card">
+          <div class="sc-header" onclick="toggleCard(this)">
+            <span class="sc-day">DIM</span><span class="sc-type t-run">Run · Longue</span>
+            <span class="sc-title">Sortie longue 55' + 3 × 9' @5:15/km</span><span class="sc-meta">1h15</span><span class="sc-chevron">▾</span>
           </div>
           <div class="sc-body">
-            <div class="sb-section">
-              <div class="sb-label sbl-main">◆ Corps de séance</div>
-              <div class="sb-text"><strong>70 min @ 5:40–5:55/km</strong> Z2
+            <div class="sb-section"><div class="sb-label sbl-main">◆ Corps</div>
+              <div class="sb-text"><strong>30 min EF</strong> @ 5:40–6:00/km
 
-<strong>15 min de progression douce :</strong>
-  · 10 min @ 5:20/km
-  · 5 dernières minutes @ 5:05/km
+<strong>3 × 9' @ 5:15/km</strong> · récup 3' trot
+FC cible : <span class="fc-chip" style="display:inline">148–158</span>
 
-Simulation mentale de la fin de course.</div>
+<strong>10 min EF</strong> pour finir</div>
+              <div class="note-box">Courir cette longue malgré la fatigue de la semaine vous aidera à être encore plus performant lors de votre 10km. Les 9 min à 5:15 sont longues mais à allure marathon confortables. Tenez bon.</div>
             </div>
-            <div class="sb-section">
-              <div class="sb-label sbl-cool">◆ Retour au calme</div>
-              <div class="sb-text">Marche 5 min + étirements complets 10 min.</div>
-            </div>
-            <div class="sb-section">
-              <div class="sb-label sbl-recup">◆ Récupération</div>
+            <div class="sb-section"><div class="sb-label sbl-recup">◆ Récupération</div>
               <div class="recup-tools">
                 <span class="rtool">👢 Bottes presso · 30–40 min</span>
                 <span class="rtool">🥶 Boule froide · mollets</span>
                 <span class="rtool">🔫 Pistolet massage · quadriceps</span>
               </div>
             </div>
-          </div>
-        </div>
-
-        <div class="session-card">
-          <div class="sc-header" onclick="toggleCard(this)">
-            <span class="sc-day">DIM</span><span class="sc-type t-bike">Bike Erg · Récup</span>
-            <span class="sc-title">Récup active Bike Erg 25'</span>
-            <span class="sc-meta">25'</span><span class="sc-chevron">▾</span>
-          </div>
-          <div class="sc-body">
-            <div class="sb-section">
-              <div class="sb-text"><strong>25 min</strong> bike erg · FC &lt;125
-Après la semaine la plus chargée du bloc. Si très fatigué → repos complet.</div>
-            </div>
+            <div class="retour-section"><div class="retour-label">📝 Mon retour</div><textarea class="retour-textarea" id="r-s03-dim" placeholder="3×9' tenus ? Fatigue cumulée ? Sensations générales..." oninput="autoSave('s03-dim',this.value)"></textarea><div style="display:flex;align-items:center"><button class="retour-save" onclick="saveRetour('s03-dim')">Sauvegarder</button><span class="retour-saved" id="saved-s03-dim">✓ Sauvegardé</span></div></div>
           </div>
         </div>
       </div><!-- /S03 -->
 
-      <!-- S04 AFFÛTAGE -->
+      <!-- ═══ S04 · 09 JUIN ═══ -->
       <div class="week-block">
         <div class="week-header">
-          <span class="week-num">S04</span>
-          <span class="week-title">Affûtage + Test de réalité</span>
-          <span class="week-badge wb-affu">~22 km</span>
+          <span class="week-num">S04 · 09 Juin</span>
+          <span class="week-title">Assimilation + Rappel allure</span>
+          <span class="week-badge wb-affu">Programme S8</span>
         </div>
 
         <div class="session-card">
           <div class="sc-header" onclick="toggleCard(this)">
             <span class="sc-day">LUN</span><span class="sc-type t-rest">Repos</span>
-            <span class="sc-title">Repos total — début affûtage</span><span class="sc-chevron">▾</span>
-          </div>
-          <div class="sc-body"><div class="sb-section"><div class="note-box">Affûtage : volume -37%, intensité maintenue. Ce lundi = repos complet.</div></div></div>
-        </div>
-
-        <div class="session-card">
-          <div class="sc-header" onclick="toggleCard(this)">
-            <span class="sc-day">MAR</span><span class="sc-type t-run">Run · VMA</span>
-            <span class="sc-title">VMA courte 6 × 1'30" @ 3:44/km</span>
-            <span class="sc-meta">40' · 7km</span><span class="sc-chevron">▾</span>
-          </div>
-          <div class="sc-body">
-            <div class="sb-section">
-              <div class="sb-label sbl-main">◆ Corps — 6 × 1'30" / 2' récup</div>
-              <table class="interval-table">
-                <tr><th>Reps</th><th>Durée</th><th>Allure</th><th>Récup</th></tr>
-                <tr><td>1–6</td><td>1'30"</td><td><span class="pace-chip">3:44/km</span></td><td>2' trot</td></tr>
-              </table>
-              <div class="note-box">Volume réduit, intensité maintenue. Tu dois sortir en ayant l'impression de pouvoir en faire encore.</div>
-            </div>
-          </div>
-        </div>
-
-        <div class="session-card">
-          <div class="sc-header" onclick="toggleCard(this)">
-            <span class="sc-day">MER</span><span class="sc-type t-run">Run · Foncier</span>
-            <span class="sc-title">Foncier Z2 — 40 min</span>
-            <span class="sc-meta">40' · 6.5km</span><span class="sc-chevron">▾</span>
-          </div>
-          <div class="sc-body">
-            <div class="sb-section">
-              <div class="sb-text"><strong>40 min @ 5:40–6:00/km</strong> · FC 128–148</div>
-            </div>
-          </div>
-        </div>
-
-        <div class="session-card">
-          <div class="sc-header" onclick="toggleCard(this)">
-            <span class="sc-day">JEU</span><span class="sc-type t-run">Run · Test</span>
-            <span class="sc-title">TEST — 5 km @ 4:30/km</span>
-            <span class="sc-meta">35' · 5km</span><span class="sc-chevron">▾</span>
-          </div>
-          <div class="sc-body">
-            <div class="sb-section">
-              <div class="sb-label sbl-warm">◆ Échauffement · 10 min</div>
-              <div class="sb-text"><strong>7 min</strong> trot Z1 + éducatifs 3 min</div>
-            </div>
-            <div class="sb-section">
-              <div class="sb-label sbl-main">◆ TEST 5 km @ 4:30/km</div>
-              <div class="sb-text">Tapis : 13.3 km/h</div>
-              <div class="note-box">✅ <strong>Tu tiens les 5 km</strong> → Sub45 confirmé. Confiance totale.
-⚠️ <strong>Tu décroches à 4:35–4:40</strong> → 95%. Fraîcheur + adrénaline = Sub45 accessible.
-❌ <strong>Tu souffres dès 3 km</strong> → Objectif 45:30. Finir fort vaut mieux que cramer à 7 km.</div>
-            </div>
-          </div>
-        </div>
-
-        <div class="session-card">
-          <div class="sc-header" onclick="toggleCard(this)">
-            <span class="sc-day">VEN</span><span class="sc-type t-rest">Repos</span>
-            <span class="sc-title">Repos ou 20' footing léger</span><span class="sc-chevron">▾</span>
-          </div>
-          <div class="sc-body"><div class="sb-section"><div class="sb-text">Si test jeudi OK → repos complet. Si jambes lourdes → 20' trot Z1 max.</div></div></div>
-        </div>
-
-        <div class="session-card">
-          <div class="sc-header" onclick="toggleCard(this)">
-            <span class="sc-day">SAM</span><span class="sc-type t-run">Run · Activation</span>
-            <span class="sc-title">Activation 45' Z2 + 5 strides</span>
-            <span class="sc-meta">45' · 7km</span><span class="sc-chevron">▾</span>
-          </div>
-          <div class="sc-body">
-            <div class="sb-section">
-              <div class="sb-text"><strong>40 min</strong> Z2 décontracté @ 5:30/km
-<strong>5 strides de 20"</strong> progressives en fin · récup 40" marche</div>
-            </div>
-          </div>
-        </div>
-
-        <div class="session-card">
-          <div class="sc-header" onclick="toggleCard(this)">
-            <span class="sc-day">DIM</span><span class="sc-type t-rest">Repos</span>
             <span class="sc-title">Repos total</span><span class="sc-chevron">▾</span>
           </div>
-          <div class="sc-body"><div class="sb-section"><div class="note-box">Race week commence lundi. Repos total dimanche.</div></div></div>
+          <div class="sc-body"><div class="sb-section"><div class="note-box">Semaine d'assimilation. Volume réduit — c'est ici que les adaptations des 3 semaines précédentes se consolident. Ne pas sauter cette semaine.</div></div>
+            <div class="retour-section"><div class="retour-label">📝 Mon retour</div><textarea class="retour-textarea" id="r-s04-lun" placeholder="Récup après S03 ?" oninput="autoSave('s04-lun',this.value)"></textarea><div style="display:flex;align-items:center"><button class="retour-save" onclick="saveRetour('s04-lun')">Sauvegarder</button><span class="retour-saved" id="saved-s04-lun">✓ Sauvegardé</span></div></div>
+          </div>
+        </div>
+
+        <div class="session-card">
+          <div class="sc-header" onclick="toggleCard(this)">
+            <span class="sc-day">LUN</span><span class="sc-type t-muscu-c">Legs · C</span>
+            <span class="sc-title">Routine C — Legs + Abdos · 8h30 · Volume réduit</span><span class="sc-meta">20'</span><span class="sc-chevron">▾</span>
+          </div>
+          <div class="sc-body">
+            <div class="sb-section"><div class="sb-label sbl-note">◆ Legs allégé · Semaine assimilation</div>
+              <table class="interval-table">
+                <tr><th>Exercice</th><th>Séries × Reps</th><th>Charge</th><th>RPE</th></tr>
+                <tr><td>RDL unilatéral KB</td><td>3 × 8 chaque</td><td>KB 24 kg</td><td>6/10</td></tr>
+                <tr><td>Step-up KB</td><td>3 × 8 chaque</td><td>KB 24 kg × 2</td><td>6/10</td></tr>
+                <tr><td>Nordic curl</td><td>2 × 6</td><td>Poids corps</td><td>7/10</td></tr>
+                <tr><td>Mollet excentrique</td><td>3 × 10 chaque</td><td>Poids corps</td><td>6/10</td></tr>
+                <tr><td>Relevé jambes suspendu</td><td>3 × 10</td><td>Barre + sangles</td><td>6/10</td></tr>
+                <tr><td>Russian twist</td><td>3 × 16</td><td>KB 12 kg</td><td>6/10</td></tr>
+              </table>
+              <div class="note-box">Volume -30%, intensité maintenue. Le corps assimile. RPE 6 max sur tout.</div>
+            </div>
+            <div class="retour-section"><div class="retour-label">📝 Mon retour</div><textarea class="retour-textarea" id="r-s04-lun-c" placeholder="Sensations avec volume réduit..." oninput="autoSave('s04-lun-c',this.value)"></textarea><div style="display:flex;align-items:center"><button class="retour-save" onclick="saveRetour('s04-lun-c')">Sauvegarder</button><span class="retour-saved" id="saved-s04-lun-c">✓ Sauvegardé</span></div></div>
+          </div>
+        </div>
+
+        <div class="session-card">
+          <div class="sc-header" onclick="toggleCard(this)">
+            <span class="sc-day">MAR</span><span class="sc-type t-run">Run · Foncier</span>
+            <span class="sc-title">45' EF — récupération active</span><span class="sc-meta">45'</span><span class="sc-chevron">▾</span>
+          </div>
+          <div class="sc-body">
+            <div class="sb-section"><div class="sb-label sbl-main">◆ Corps</div>
+              <div class="sb-text"><strong>45 min EF @ 5:40–6:00/km</strong>
+Pas de sprints cette semaine — foncier pur. Corps qui récupère.</div>
+            </div>
+            <div class="retour-section"><div class="retour-label">📝 Mon retour</div><textarea class="retour-textarea" id="r-s04-mar" placeholder="Legs lourdes ou légères ? FC normale ?" oninput="autoSave('s04-mar',this.value)"></textarea><div style="display:flex;align-items:center"><button class="retour-save" onclick="saveRetour('s04-mar')">Sauvegarder</button><span class="retour-saved" id="saved-s04-mar">✓ Sauvegardé</span></div></div>
+          </div>
+        </div>
+
+        <div class="session-card">
+          <div class="sc-header" onclick="toggleCard(this)">
+            <span class="sc-day">MER</span><span class="sc-type t-muscu-a">Push · A</span>
+            <span class="sc-title">Routine A — Push + Abdos · 8h30 · Volume réduit</span><span class="sc-meta">20'</span><span class="sc-chevron">▾</span>
+          </div>
+          <div class="sc-body">
+            <div class="sb-section"><div class="sb-label sbl-note">◆ Push allégé · Semaine assimilation</div>
+              <table class="interval-table">
+                <tr><th>Exercice</th><th>Séries × Reps</th><th>Charge</th><th>RPE</th></tr>
+                <tr><td>Développé couché barre</td><td>3 × 6</td><td>75 kg</td><td>6/10</td></tr>
+                <tr><td>Dips lestés</td><td>3 × 8</td><td>+10 kg</td><td>6/10</td></tr>
+                <tr><td>Élévations latérales DB</td><td>3 × 12</td><td>10 kg</td><td>6/10</td></tr>
+                <tr><td>Arnold press DB</td><td>3 × 10</td><td>15 kg</td><td>6/10</td></tr>
+                <tr><td>Hollow body hold</td><td>3 × 30"</td><td>—</td><td>6/10</td></tr>
+                <tr><td>Ab wheel rollout</td><td>3 × 8</td><td>Depuis genoux</td><td>6/10</td></tr>
+              </table>
+            </div>
+            <div class="retour-section"><div class="retour-label">📝 Mon retour</div><textarea class="retour-textarea" id="r-s04-mer-a" placeholder="Sensations avec charges réduites..." oninput="autoSave('s04-mer-a',this.value)"></textarea><div style="display:flex;align-items:center"><button class="retour-save" onclick="saveRetour('s04-mer-a')">Sauvegarder</button><span class="retour-saved" id="saved-s04-mer-a">✓ Sauvegardé</span></div></div>
+          </div>
+        </div>
+
+        <div class="session-card">
+          <div class="sc-header" onclick="toggleCard(this)">
+            <span class="sc-day">JEU</span><span class="sc-type t-run">Run · Rappel</span>
+            <span class="sc-title">4 × 2'30" @ 4:30/km — Rappel allure</span><span class="sc-meta">45'</span><span class="sc-chevron">▾</span>
+          </div>
+          <div class="sc-body">
+            <div class="sb-section"><div class="sb-label sbl-warm">◆ Échauffement · 15 min</div>
+              <div class="sb-text"><strong>10 min</strong> trot Z1 + éducatifs + 2 accélérations</div>
+            </div>
+            <div class="sb-section"><div class="sb-label sbl-main">◆ Corps — Fractions courtes · rappel allure</div>
+              <table class="interval-table">
+                <tr><th>Rep</th><th>Durée</th><th>Allure</th><th>FC</th><th>Récup</th></tr>
+                <tr><td>1–4</td><td>2'30"</td><td><span class="pace-chip">4:30/km</span></td><td><span class="fc-chip">160–170</span></td><td>1'15" trot</td></tr>
+              </table>
+              <div class="note-box">Semaine cool — fractions courtes, pas plus. L'objectif est un rappel neuromusculaire de l'allure, pas un effort maximal. Tu dois sortir en ayant l'impression que tu aurais pu faire le double.</div>
+            </div>
+            <div class="sb-section"><div class="sb-label sbl-main">◆ Après</div>
+              <div class="sb-text"><strong>10 min EF</strong> pour finir</div>
+            </div>
+            <div class="retour-section"><div class="retour-label">📝 Mon retour</div><textarea class="retour-textarea" id="r-s04-jeu" placeholder="Allure facile comparé à S3 ? Jambes fraîches ?" oninput="autoSave('s04-jeu',this.value)"></textarea><div style="display:flex;align-items:center"><button class="retour-save" onclick="saveRetour('s04-jeu')">Sauvegarder</button><span class="retour-saved" id="saved-s04-jeu">✓ Sauvegardé</span></div></div>
+          </div>
+        </div>
+
+        <div class="session-card">
+          <div class="sc-header" onclick="toggleCard(this)">
+            <span class="sc-day">VEN</span><span class="sc-type t-muscu-b">Pull · B</span>
+            <span class="sc-title">Routine B — Pull + Abdos · 8h30 · Volume réduit</span><span class="sc-meta">20'</span><span class="sc-chevron">▾</span>
+          </div>
+          <div class="sc-body">
+            <div class="sb-section"><div class="sb-label sbl-note">◆ Pull allégé · Semaine assimilation</div>
+              <table class="interval-table">
+                <tr><th>Exercice</th><th>Séries × Reps</th><th>Charge</th><th>RPE</th></tr>
+                <tr><td>Tractions pronation</td><td>3 × 6</td><td>+5 kg ceinture</td><td>6/10</td></tr>
+                <tr><td>Tirage horizontal TRX</td><td>3 × 10</td><td>Corps ~45°</td><td>6/10</td></tr>
+                <tr><td>Face pull élastique</td><td>3 × 15</td><td>Élastique rouge</td><td>5/10</td></tr>
+                <tr><td>Curl biceps DB</td><td>3 × 10</td><td>15 kg</td><td>6/10</td></tr>
+                <tr><td>Rotation externe allongé</td><td>3 × 12 chaque</td><td>DB 5 kg</td><td>5/10</td></tr>
+                <tr><td>Pallof press</td><td>3 × 10 chaque</td><td>Élastique orange</td><td>5/10</td></tr>
+                <tr><td>Crunch bicycle lent</td><td>3 × 14</td><td>—</td><td>5/10</td></tr>
+              </table>
+            </div>
+            <div class="retour-section"><div class="retour-label">📝 Mon retour</div><textarea class="retour-textarea" id="r-s04-ven-b" placeholder="Sensations allégées..." oninput="autoSave('s04-ven-b',this.value)"></textarea><div style="display:flex;align-items:center"><button class="retour-save" onclick="saveRetour('s04-ven-b')">Sauvegarder</button><span class="retour-saved" id="saved-s04-ven-b">✓ Sauvegardé</span></div></div>
+          </div>
+        </div>
+
+        <div class="session-card">
+          <div class="sc-header" onclick="toggleCard(this)">
+            <span class="sc-day">VEN</span><span class="sc-type t-swim">Nage · Technique</span>
+            <span class="sc-title">Natation — Technique + continuité</span><span class="sc-meta">Piscine · 45'</span><span class="sc-chevron">▾</span>
+          </div>
+          <div class="sc-body">
+            <div class="sb-section"><div class="sb-label sbl-main">◆ Corps</div>
+              <div class="sb-text"><strong>4 × 25m</strong> éducatifs
+<strong>6 × 100m</strong> @ allure confortable · récup 45"
+Première fois à 100m par intervalle — priorité au maintien technique sur la longueur.</div>
+            </div>
+            <div class="retour-section"><div class="retour-label">📝 Mon retour</div><textarea class="retour-textarea" id="r-s04-ven" placeholder="100m tenus ? Technique maintenue ?" oninput="autoSave('s04-ven',this.value)"></textarea><div style="display:flex;align-items:center"><button class="retour-save" onclick="saveRetour('s04-ven')">Sauvegarder</button><span class="retour-saved" id="saved-s04-ven">✓ Sauvegardé</span></div></div>
+          </div>
+        </div>
+
+        <div class="session-card">
+          <div class="sc-header" onclick="toggleCard(this)">
+            <span class="sc-day">SAM</span><span class="sc-type t-rest">Repos</span>
+            <span class="sc-title">Repos total</span><span class="sc-chevron">▾</span>
+          </div>
+          <div class="sc-body"><div class="sb-section"><div class="note-box">Repos avant la longue douce de dimanche.</div></div></div>
+        </div>
+
+        <div class="session-card">
+          <div class="sc-header" onclick="toggleCard(this)">
+            <span class="sc-day">DIM</span><span class="sc-type t-run">Run · Longue</span>
+            <span class="sc-title">Sortie longue 1h EF — récupération active</span><span class="sc-meta">1h</span><span class="sc-chevron">▾</span>
+          </div>
+          <div class="sc-body">
+            <div class="sb-section"><div class="sb-label sbl-main">◆ Corps</div>
+              <div class="sb-text"><strong>1h EF @ 5:40–6:00/km</strong> · FC 128–148
+Pas de blocs tempo cette semaine — sortie longue pure. Récupérez et profitez-en avant d'entamer la race week.</div>
+            </div>
+            <div class="sb-section"><div class="sb-label sbl-recup">◆ Récupération</div>
+              <div class="recup-tools">
+                <span class="rtool">👢 Bottes presso · 30 min</span>
+                <span class="rtool">⚡ Compex récup · soir</span>
+              </div>
+            </div>
+            <div class="retour-section"><div class="retour-label">📝 Mon retour</div><textarea class="retour-textarea" id="r-s04-dim" placeholder="Jambes fraîches ? Énergie comparé à S3 ?" oninput="autoSave('s04-dim',this.value)"></textarea><div style="display:flex;align-items:center"><button class="retour-save" onclick="saveRetour('s04-dim')">Sauvegarder</button><span class="retour-saved" id="saved-s04-dim">✓ Sauvegardé</span></div></div>
+          </div>
         </div>
       </div><!-- /S04 -->
 
-      <!-- S05 RACE WEEK -->
+      <!-- ═══ S05 RACE WEEK · 16 JUIN ═══ -->
       <div class="week-block">
         <div class="week-header">
-          <span class="week-num">S05</span>
+          <span class="week-num">S05 · 16 Juin</span>
           <span class="week-title">🏁 Race Week — 10k Estérel 21 Juin</span>
           <span class="week-badge wb-race">Compétition</span>
         </div>
@@ -1584,20 +1664,22 @@ Après la semaine la plus chargée du bloc. Si très fatigué → repos complet.
             <span class="sc-day">LUN</span><span class="sc-type t-rest">Repos</span>
             <span class="sc-title">Repos total</span><span class="sc-chevron">▾</span>
           </div>
-          <div class="sc-body"><div class="sb-section"><div class="note-box">Ton corps est entraîné. Cette semaine tu ne gagnes plus de condition — tu la conserves et tu arrives frais.</div></div></div>
+          <div class="sc-body"><div class="sb-section"><div class="note-box">Ton corps est entraîné. Cette semaine tu ne gagnes plus de condition — tu la conserves et tu arrives frais. Pas de muscu cette semaine.</div></div>
+            <div class="retour-section"><div class="retour-label">📝 Mon retour</div><textarea class="retour-textarea" id="r-s05-lun" placeholder="État mental en début de race week..." oninput="autoSave('s05-lun',this.value)"></textarea><div style="display:flex;align-items:center"><button class="retour-save" onclick="saveRetour('s05-lun')">Sauvegarder</button><span class="retour-saved" id="saved-s05-lun">✓ Sauvegardé</span></div></div>
+          </div>
         </div>
 
         <div class="session-card">
           <div class="sc-header" onclick="toggleCard(this)">
             <span class="sc-day">MAR</span><span class="sc-type t-run">Run · Activation</span>
-            <span class="sc-title">Activation 25' + 4 accélérations</span>
-            <span class="sc-meta">25'</span><span class="sc-chevron">▾</span>
+            <span class="sc-title">45' EF — activation légère</span><span class="sc-meta">45'</span><span class="sc-chevron">▾</span>
           </div>
           <div class="sc-body">
-            <div class="sb-section">
-              <div class="sb-text"><strong>20 min</strong> trot Z2 décontracté
-<strong>4 accélérations de 20"</strong> · récup marche 40" · dernière jusqu'à l'allure course</div>
+            <div class="sb-section"><div class="sb-label sbl-main">◆ Corps</div>
+              <div class="sb-text"><strong>45 min EF @ 5:40–6:00/km</strong>
+Pas de sprints. Foncier pur. Jambes actives sans stress.</div>
             </div>
+            <div class="retour-section"><div class="retour-label">📝 Mon retour</div><textarea class="retour-textarea" id="r-s05-mar" placeholder="Jambes fraîches ? Légèreté ?" oninput="autoSave('s05-mar',this.value)"></textarea><div style="display:flex;align-items:center"><button class="retour-save" onclick="saveRetour('s05-mar')">Sauvegarder</button><span class="retour-saved" id="saved-s05-mar">✓ Sauvegardé</span></div></div>
           </div>
         </div>
 
@@ -1611,16 +1693,24 @@ Après la semaine la plus chargée du bloc. Si très fatigué → repos complet.
 
         <div class="session-card">
           <div class="sc-header" onclick="toggleCard(this)">
-            <span class="sc-day">JEU</span><span class="sc-type t-run">Run · Activation</span>
-            <span class="sc-title">Rappel neuromusculaire 20' + 3×1'</span>
-            <span class="sc-meta">20'</span><span class="sc-chevron">▾</span>
+            <span class="sc-day">JEU</span><span class="sc-type t-run">Run · Rappel</span>
+            <span class="sc-title">5 × 1' @ 4:30/km — Rappel neuromusculaire</span><span class="sc-meta">40'</span><span class="sc-chevron">▾</span>
           </div>
           <div class="sc-body">
-            <div class="sb-section">
-              <div class="sb-text"><strong>15 min</strong> trot Z2
-<strong>3 × 1' @ 4:30/km</strong> · récup trot 2'
-Rappel neuromusculaire — décontracté, pas un effort maximal.</div>
+            <div class="sb-section"><div class="sb-label sbl-warm">◆ Échauffement · 15 min</div>
+              <div class="sb-text"><strong>10 min</strong> trot Z1 + éducatifs + 2 accélérations progressives</div>
             </div>
+            <div class="sb-section"><div class="sb-label sbl-main">◆ Corps — 5 × 1' @ allure course</div>
+              <table class="interval-table">
+                <tr><th>Rep</th><th>Durée</th><th>Allure</th><th>Récup</th></tr>
+                <tr><td>1–5</td><td>1'</td><td><span class="pace-chip">4:30/km</span></td><td>1' trot</td></tr>
+              </table>
+              <div class="note-box">Tapis : 13.3 km/h. Très court intentionnellement. Le système nerveux se souvient de l'allure. Décontracté — c'est un rappel, pas un effort.</div>
+            </div>
+            <div class="sb-section"><div class="sb-label sbl-main">◆ Après</div>
+              <div class="sb-text"><strong>10 min EF</strong> très léger pour finir</div>
+            </div>
+            <div class="retour-section"><div class="retour-label">📝 Mon retour</div><textarea class="retour-textarea" id="r-s05-jeu" placeholder="Allure facile ? Jambes légères ?" oninput="autoSave('s05-jeu',this.value)"></textarea><div style="display:flex;align-items:center"><button class="retour-save" onclick="saveRetour('s05-jeu')">Sauvegarder</button><span class="retour-saved" id="saved-s05-jeu">✓ Sauvegardé</span></div></div>
           </div>
         </div>
 
@@ -1630,10 +1720,10 @@ Rappel neuromusculaire — décontracté, pas un effort maximal.</div>
             <span class="sc-title">Repos — Nutrition + Mental</span><span class="sc-chevron">▾</span>
           </div>
           <div class="sc-body">
-            <div class="sb-section">
-              <div class="sb-text">Charge glucides ce soir et demain : pâtes · riz · pain · hydratation continue.</div>
-              <div class="note-box"><strong>Mental :</strong> Tu as fait le travail. En S1 tu n'aurais pas pu tenir 4:30/km 12 minutes. Maintenant tu l'as fait 3 fois de suite. C'est réel.</div>
+            <div class="sb-section"><div class="sb-text">Charge glucides : pâtes · riz · pain · hydratation continue.</div>
+              <div class="note-box"><strong>Mental :</strong> Tu as fait le travail. En 4 semaines tu es passé de 5×4' à 5×6' à 4:30/km. Le jour J tu as l'adrénaline en plus. C'est réel.</div>
             </div>
+            <div class="retour-section"><div class="retour-label">📝 Mon retour</div><textarea class="retour-textarea" id="r-s05-ven" placeholder="État mental J-2 de la course..." oninput="autoSave('s05-ven',this.value)"></textarea><div style="display:flex;align-items:center"><button class="retour-save" onclick="saveRetour('s05-ven')">Sauvegarder</button><span class="retour-saved" id="saved-s05-ven">✓ Sauvegardé</span></div></div>
           </div>
         </div>
 
@@ -1643,8 +1733,7 @@ Rappel neuromusculaire — décontracté, pas un effort maximal.</div>
             <span class="sc-title">Marche 20' + mobilité</span><span class="sc-chevron">▾</span>
           </div>
           <div class="sc-body">
-            <div class="sb-section">
-              <div class="sb-text">20 min marche légère · mobilité douce 10 min · check matériel</div>
+            <div class="sb-section"><div class="sb-text">20 min marche légère · mobilité douce 10 min · check matériel · repérage mental du parcours</div>
               <div class="recup-tools"><span class="rtool">👢 Bottes presso optionnel 20 min</span></div>
             </div>
           </div>
@@ -1653,18 +1742,15 @@ Rappel neuromusculaire — décontracté, pas un effort maximal.</div>
         <div class="session-card race-card">
           <div class="sc-header" onclick="toggleCard(this)">
             <span class="sc-day">DIM</span><span class="sc-type t-race">🏁 RACE</span>
-            <span class="sc-title">10k ESTÉREL — TARGET SUB 45:00</span>
-            <span class="sc-meta">21 Juin</span><span class="sc-chevron">▾</span>
+            <span class="sc-title">10k ESTÉREL — TARGET SUB 45:00</span><span class="sc-meta">21 Juin</span><span class="sc-chevron">▾</span>
           </div>
           <div class="sc-body">
-            <div class="sb-section">
-              <div class="sb-label sbl-warm">◆ Échauffement · 15 min avant départ</div>
+            <div class="sb-section"><div class="sb-label sbl-warm">◆ Échauffement · 15 min avant départ</div>
               <div class="sb-text"><strong>10 min</strong> trot très léger + éducatifs 3 min + 2 accélérations vers allure course</div>
             </div>
-            <div class="sb-section">
-              <div class="sb-label sbl-main">◆ Stratégie de course</div>
+            <div class="sb-section"><div class="sb-label sbl-main">◆ Stratégie de course</div>
               <div class="sb-text"><strong>km 1 → 4:35/km MAX</strong>
-L'adrénaline pousse à partir trop vite. Résiste. km 1 trop rapide = km 7–10 en enfer.
+L'adrénaline pousse à partir trop vite → résiste. km 1 trop rapide = km 7–10 en enfer.
 
 <strong>km 2–7 → 4:30/km verrouillé</strong>
 Allure mécanique. Pas d'émotion. Respire. Gère.
@@ -1672,13 +1758,13 @@ Allure mécanique. Pas d'émotion. Respire. Gère.
 <strong>km 8–9 → Donne plus</strong>
 <strong>km 10 → Vide les batteries complètement</strong></div>
             </div>
-            <div class="sb-section">
-              <div class="sb-label sbl-recup">◆ Récupération post-race</div>
+            <div class="sb-section"><div class="sb-label sbl-recup">◆ Récupération post-race</div>
               <div class="recup-tools">
                 <span class="rtool">👢 Bottes presso · 40 min</span>
                 <span class="rtool">⚡ Compex récup · 30 min soir</span>
               </div>
             </div>
+            <div class="retour-section"><div class="retour-label">📝 Mon retour · RÉSULTAT COURSE</div><textarea class="retour-textarea" id="r-s05-dim" placeholder="Temps final, km par km, sensations, ce qui a marché, ce qui n'a pas marché..." oninput="autoSave('s05-dim',this.value)"></textarea><div style="display:flex;align-items:center"><button class="retour-save" onclick="saveRetour('s05-dim')">Sauvegarder</button><span class="retour-saved" id="saved-s05-dim">✓ Sauvegardé</span></div></div>
           </div>
         </div>
       </div><!-- /S05 -->
@@ -2179,28 +2265,29 @@ function toggleCard(h){h.parentElement.classList.toggle('open');}
 
 // ── Retour / Journal ──
 const SESSION_NAMES = {
-  's01-lun':'S01 · LUN · Repos + Mobilité','s01-lun-c':'S01 · LUN · Muscu C Abdos',
-  's01-mar':'S01 · MAR · VMA 6×2\'30"','s01-mer-a':'S01 · MER · Muscu A',
-  's01-mer':'S01 · MER · Foncier Z2 45\'','s01-jeu':'S01 · JEU · Seuil 2×12\'',
-  's01-ven-a':'S01 · VEN · Muscu A','s01-ven':'S01 · VEN · Natation technique',
-  's01-sam':'S01 · SAM · Longue 70\'','s01-dim':'S01 · DIM · Bike Erg récup',
-  's02-lun':'S02 · LUN · Repos','s02-lun-c':'S02 · LUN · Muscu C Abdos',
-  's02-mar':'S02 · MAR · VMA 8×2\'','s02-mer-b':'S02 · MER · Muscu B',
-  's02-mer':'S02 · MER · Foncier Z2 50\'','s02-jeu':'S02 · JEU · Seuil 3×10\'',
-  's02-ven-b':'S02 · VEN · Muscu B','s02-ven':'S02 · VEN · Natation',
-  's02-sam':'S02 · SAM · Longue 75\'','s02-dim':'S02 · DIM · Bike Erg récup',
-  's03-lun':'S03 · LUN · Repos','s03-lun-c':'S03 · LUN · Muscu C Abdos',
-  's03-mar':'S03 · MAR · VMA 5×4\'','s03-mer-a':'S03 · MER · Muscu A',
-  's03-mer':'S03 · MER · Foncier + accélérations','s03-jeu':'S03 · JEU · Allure cible 3×12\'',
-  's03-ven-a':'S03 · VEN · Muscu A','s03-ven':'S03 · VEN · Nage test 800m',
-  's03-sam':'S03 · SAM · Longue 85\'','s03-dim':'S03 · DIM · Bike Erg récup',
-  's04-lun':'S04 · LUN · Repos affûtage','s04-mar':'S04 · MAR · VMA courte',
-  's04-mer-b':'S04 · MER · Muscu B (léger)','s04-mer':'S04 · MER · Foncier 40\'',
-  's04-jeu':'S04 · JEU · Test 5km','s04-ven':'S04 · VEN · Repos',
-  's04-sam':'S04 · SAM · Activation','s04-dim':'S04 · DIM · Repos',
-  's05-lun':'S05 · LUN · Repos race week','s05-mar':'S05 · MAR · Activation',
-  's05-mer':'S05 · MER · Repos','s05-jeu':'S05 · JEU · Rappel neuro',
-  's05-ven':'S05 · VEN · Repos nutrition','s05-sam':'S05 · SAM · Marche mobilité',
+  // S01
+  's01-lun':'S01 · LUN · Repos + Mobilité','s01-lun-c':'S01 · LUN · Muscu C Legs',
+  's01-mar':'S01 · MAR · 45\' EF + Sprints','s01-mer-a':'S01 · MER · Muscu A Push',
+  's01-jeu':'S01 · JEU · 5×4\' @4:30/km','s01-ven-b':'S01 · VEN · Muscu B Pull',
+  's01-ven':'S01 · VEN · Natation technique','s01-dim':'S01 · DIM · Longue + 2×5\' @5:15',
+  // S02
+  's02-lun':'S02 · LUN · Repos','s02-lun-c':'S02 · LUN · Muscu C Legs',
+  's02-mar':'S02 · MAR · 45\' EF + Sprints','s02-mer-a':'S02 · MER · Muscu A Push',
+  's02-jeu':'S02 · JEU · 5×5\' @4:30/km','s02-ven-b':'S02 · VEN · Muscu B Pull',
+  's02-ven':'S02 · VEN · Natation','s02-dim':'S02 · DIM · Longue + 3×5\' @5:15',
+  // S03
+  's03-lun':'S03 · LUN · Repos','s03-lun-c':'S03 · LUN · Muscu C Legs',
+  's03-mar':'S03 · MAR · 45\' EF + Sprints','s03-mer-a':'S03 · MER · Muscu A Push',
+  's03-jeu':'S03 · JEU · 5×6\' @4:30/km ← Séance clé','s03-ven-b':'S03 · VEN · Muscu B Pull',
+  's03-ven':'S03 · VEN · Nage test 800m','s03-dim':'S03 · DIM · Longue + 3×9\' @5:15',
+  // S04
+  's04-lun':'S04 · LUN · Repos assimilation','s04-lun-c':'S04 · LUN · Muscu C allégé',
+  's04-mar':'S04 · MAR · 45\' EF récup','s04-mer-a':'S04 · MER · Muscu A allégé',
+  's04-jeu':'S04 · JEU · 4×2\'30" @4:30 rappel','s04-ven-b':'S04 · VEN · Muscu B allégé',
+  's04-ven':'S04 · VEN · Nage 6×100m','s04-dim':'S04 · DIM · 1h EF longue douce',
+  // S05 Race week
+  's05-lun':'S05 · LUN · Repos race week','s05-mar':'S05 · MAR · 45\' EF activation',
+  's05-jeu':'S05 · JEU · 5×1\' @4:30 rappel','s05-ven':'S05 · VEN · Repos nutrition mental',
   's05-dim':'S05 · DIM · 🏁 RACE 10k Estérel'
 };
 
