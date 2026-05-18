@@ -1,1 +1,12 @@
+{
+  "name": "Anton Training Hub",
+  "short_name": "Anton·Hub",
+  "description": "Programme entraînement - 10k / Triathlon / Hyrox",
+  "start_url": "/Anton-hub/",
+  "scope": "/Anton-hub/",
+  "display": "standalone",
+  "background_color": "#0C0D0F",
+  "theme_color": "#0C0D0F",
+  "orientation": "portrait"
+}
 
