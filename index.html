@@ -14,9 +14,37 @@
 </head>
 <body>
 
+<!-- ── HEADER ── -->
 <header class="header">
   <div class="header-inner">
-    <div class="logo">ANTON<span>·HUB</span></div>
+    <div class="logo-unblock" id="logoUnblock">
+      <!-- DARK: lime+white / LIGHT: lime+black -->
+      <svg viewBox="0 0 420 100" height="32" xmlns="http://www.w3.org/2000/svg" aria-label="UNBLOCK">
+        <!-- un -->
+        <text x="0" y="78" font-family="Arial Black, sans-serif" font-size="90" font-weight="900" fill="#C8F135" class="logo-un">un</text>
+        <!-- runner icon -->
+        <g transform="translate(158,8) scale(0.72)" fill="none" stroke="#FFFFFF" stroke-width="5" class="logo-icon">
+          <circle cx="28" cy="12" r="8" fill="#FFFFFF" stroke="none"/>
+          <path d="M28 20 L22 45 L14 62" stroke-linecap="round"/>
+          <path d="M28 20 L34 45 L44 62" stroke-linecap="round"/>
+          <path d="M22 35 L10 30" stroke-linecap="round"/>
+          <path d="M28 35 L42 28" stroke-linecap="round"/>
+          <path d="M6 32 L2 28" stroke-linecap="round" stroke-width="3"/>
+          <path d="M4 30 L0 26" stroke-linecap="round" stroke-width="2"/>
+        </g>
+        <!-- bl -->
+        <text x="208" y="78" font-family="Arial Black, sans-serif" font-size="90" font-weight="900" fill="#FFFFFF" class="logo-white">bl</text>
+        <!-- lock icon replacing 'o' -->
+        <g transform="translate(283,4)">
+          <rect x="2" y="38" width="52" height="46" rx="8" fill="#C8F135"/>
+          <path d="M10 38 L10 22 Q28 0 46 22 L46 38" fill="none" stroke="#C8F135" stroke-width="8" stroke-linecap="round"/>
+          <circle cx="28" cy="58" r="8" fill="#0C0D0F" class="lock-brain"/>
+          <text x="28" y="63" font-family="Arial" font-size="11" fill="#0C0D0F" text-anchor="middle" class="lock-inner">🧠</text>
+        </g>
+        <!-- ck -->
+        <text x="342" y="78" font-family="Arial Black, sans-serif" font-size="90" font-weight="900" fill="#FFFFFF" class="logo-white">ck</text>
+      </svg>
+    </div>
     <div class="header-right">
       <div class="race-chip">10k 21 Juin</div>
       <button class="theme-btn" onclick="toggleTheme()" id="themeBtn">☀️</button>
@@ -24,72 +52,138 @@
   </div>
 </header>
 
+<!-- ── MAIN ── -->
 <main class="main">
 
+  <!-- ══ PROGRAMME ══ -->
   <div class="page active" id="page-programme">
     <div class="page-hero">
       <div class="page-eye">18 Mai → 28 Oct 2026 · 3 objectifs</div>
       <div class="page-title">Programme<br><span>Entraînement</span></div>
       <div class="page-sub">VMA 14.6 · FC max 178 · FC repos 40 · 84.4 kg</div>
     </div>
-    <div class="allures-bar">
+
+    <div class="allures-bar" id="alluresBar">
       <div class="allure-item"><div class="allure-val green">5:45</div><div class="allure-label">Z2 Foncier</div></div>
       <div class="allure-item"><div class="allure-val gold">4:47</div><div class="allure-label">Seuil</div></div>
       <div class="allure-item"><div class="allure-val orange">4:30</div><div class="allure-label">Cible 10k</div></div>
       <div class="allure-item"><div class="allure-val red">4:06</div><div class="allure-label">VMA 100%</div></div>
       <div class="allure-item" style="border-right:none"><div class="allure-val red">3:44</div><div class="allure-label">VMA 110%</div></div>
     </div>
+
     <div class="week-selector" id="weekSelector"></div>
     <div id="sessionList"></div>
   </div>
 
+  <!-- ══ MUSCU ══ -->
   <div class="page" id="page-muscu">
     <div class="page-hero">
       <div class="page-eye">Référence · Toutes phases</div>
       <div class="page-title">Muscu<br><span>Push / Pull / Legs</span></div>
-      <div class="page-sub">3 routines · Lun/Mer/Ven 8h30 · 25 min</div>
+      <div class="page-sub">3 routines · Lun/Mer/Ven 8h30 · 25 min · Progression semaine par semaine</div>
     </div>
     <div id="muscuContent"></div>
   </div>
 
+  <!-- ══ NAGE ══ -->
   <div class="page" id="page-nage">
     <div class="page-hero">
       <div class="page-eye">Référence · Bloc 1 + début Bloc 2</div>
       <div class="page-title">Éducatifs<br><span>Natation</span></div>
-      <div class="page-sub">7 drills fondamentaux · 2–3 par séance</div>
+      <div class="page-sub">7 drills fondamentaux · 2–3 par séance · Début de séance · Pas d'effort cardio sur les drills</div>
     </div>
     <div id="nageContent"></div>
   </div>
 
+  <!-- ══ RÉFÉRENCE ══ -->
   <div class="page" id="page-ref">
     <div class="page-hero">
       <div class="page-eye">Données personnelles</div>
       <div class="page-title">Référence<br><span>& Ajustements</span></div>
     </div>
-    <div class="ref-card"><div class="ref-card-title">📊 Allures de référence</div><div id="refAllures"></div></div>
-    <div class="ref-card" style="margin-top:1px"><div class="ref-card-title">❤️ FC de référence</div><div id="refFC"></div></div>
-    <div class="ref-card" style="margin-top:1px"><div class="ref-card-title">🎯 Objectifs</div><div id="refObjectifs"></div></div>
-    <div class="ref-card" style="margin-top:8px"><div class="ref-card-title">⚡ Ajustements semaine/semaine</div><div style="font-size:11px;color:var(--dim);margin-bottom:12px;line-height:1.6">Lire chaque lundi matin. 1 signal = ajustement mineur. 2 = semaine allégée. 3 = récup forcée.</div></div>
-    <div class="signal-card"><div class="sig-title">❤️ FC au repos</div><div class="sig-row"><span class="sig-tag sig-r">+5 bpm</span><div class="sig-action"><strong>Fatigue.</strong> Supprime la VMA, remplace par foncier Z2.</div></div><div class="sig-row"><span class="sig-tag sig-r">+8 bpm</span><div class="sig-action"><strong>Surcharge.</strong> Volume -30%, zéro intensité.</div></div><div class="sig-row"><span class="sig-tag sig-ok">Normale</span><div class="sig-action">Programme intact.</div></div></div>
-    <div class="signal-card"><div class="sig-title">🏃 Qualité séances</div><div class="sig-row"><span class="sig-tag sig-r">Décroche</span><div class="sig-action"><strong>Raccourcis</strong> les intervalles de 1–2' la semaine suivante.</div></div><div class="sig-row"><span class="sig-tag sig-y">C'est dur</span><div class="sig-action">Programme intact.</div></div><div class="sig-row"><span class="sig-tag sig-ok">Confortable</span><div class="sig-action">Avance de 30–60" sur la durée.</div></div></div>
-    <div class="signal-card"><div class="sig-title">😴 Sommeil</div><div class="sig-row"><span class="sig-tag sig-r">2+ nuits &lt;6h</span><div class="sig-action"><strong>Zéro qualité.</strong> Foncier Z2 uniquement.</div></div><div class="sig-row"><span class="sig-tag sig-y">1 mauvaise</span><div class="sig-action">Décale la séance qualitative de 24h.</div></div><div class="sig-row"><span class="sig-tag sig-ok">Normal</span><div class="sig-action">Programme intact.</div></div></div>
-    <div class="signal-card"><div class="sig-title">⚡ Énergie /10</div><div class="sig-row"><span class="sig-tag sig-r">≤ 4/10</span><div class="sig-action"><strong>Semaine allégée.</strong> -25% volume.</div></div><div class="sig-row"><span class="sig-tag sig-y">5–6/10</span><div class="sig-action">Plafonne l'intensité.</div></div><div class="sig-row"><span class="sig-tag sig-ok">≥ 7/10</span><div class="sig-action">Programme intact.</div></div></div>
-    <div class="signal-card"><div class="sig-title">🦵 Douleurs</div><div class="sig-row"><span class="sig-tag sig-r">Genou/tendon</span><div class="sig-action"><strong>Stop run 48h.</strong> Bike erg Z2.</div></div><div class="sig-row"><span class="sig-tag sig-ok">Rien</span><div class="sig-action">Programme intact.</div></div></div>
-    <div class="ref-card" style="margin-top:8px"><div class="ref-card-title">🟢 Récupération</div><div class="ref-row"><span class="ref-zone">👢 Bottes presso</span><span class="ref-val green">Post-longue 30' · Post-VMA 20'</span></div><div class="ref-row"><span class="ref-zone">⚡ Électrodes Compex</span><span class="ref-val green">Récup quad + ischios 20'</span></div><div class="ref-row"><span class="ref-zone">🥶 Boule froide</span><span class="ref-val green">Immédiat post-effort · 5 min</span></div><div class="ref-row"><span class="ref-zone">🔫 Pistolet massage</span><span class="ref-val green">Post-longue · 3 min</span></div></div>
+
+    <div class="ref-card">
+      <div class="ref-card-title">📊 Allures de référence</div>
+      <div id="refAllures"></div>
+    </div>
+
+    <div class="ref-card" style="margin-top:1px">
+      <div class="ref-card-title">❤️ FC de référence</div>
+      <div id="refFC"></div>
+    </div>
+
+    <div class="ref-card" style="margin-top:1px">
+      <div class="ref-card-title">🎯 Objectifs</div>
+      <div id="refObjectifs"></div>
+    </div>
+
+    <div class="ref-card" style="margin-top:8px">
+      <div class="ref-card-title">⚡ Ajustements semaine/semaine</div>
+      <div style="font-size:11px;color:var(--dim);margin-bottom:12px;line-height:1.6">
+        Lire chaque lundi matin. 1 signal = ajustement mineur. 2 = semaine allégée. 3 = récup forcée.
+      </div>
+    </div>
+
+    <div class="signal-card">
+      <div class="sig-title">❤️ FC au repos</div>
+      <div class="sig-row"><span class="sig-tag sig-r">+5 bpm</span><div class="sig-action"><strong>Fatigue.</strong> Supprime la VMA, remplace par foncier Z2.</div></div>
+      <div class="sig-row"><span class="sig-tag sig-r">+8 bpm</span><div class="sig-action"><strong>Surcharge.</strong> Volume -30%, zéro intensité cette semaine.</div></div>
+      <div class="sig-row"><span class="sig-tag sig-ok">Normale</span><div class="sig-action">Programme intact.</div></div>
+    </div>
+
+    <div class="signal-card">
+      <div class="sig-title">🏃 Qualité séances allure / VMA</div>
+      <div class="sig-row"><span class="sig-tag sig-r">Décroche</span><div class="sig-action"><strong>Raccourcis</strong> les intervalles de 1–2' la semaine suivante.</div></div>
+      <div class="sig-row"><span class="sig-tag sig-y">C'est dur</span><div class="sig-action">Programme intact. C'est censé être dur.</div></div>
+      <div class="sig-row"><span class="sig-tag sig-ok">Confortable</span><div class="sig-action">Avance de 30–60" sur la durée des intervalles.</div></div>
+    </div>
+
+    <div class="signal-card">
+      <div class="sig-title">😴 Sommeil</div>
+      <div class="sig-row"><span class="sig-tag sig-r">2+ nuits &lt;6h</span><div class="sig-action"><strong>Zéro qualité.</strong> Foncier Z2 uniquement + muscu allégée.</div></div>
+      <div class="sig-row"><span class="sig-tag sig-y">1 mauvaise</span><div class="sig-action">Décale la séance qualitative de 24h si possible.</div></div>
+      <div class="sig-row"><span class="sig-tag sig-ok">Normal</span><div class="sig-action">Programme intact.</div></div>
+    </div>
+
+    <div class="signal-card">
+      <div class="sig-title">⚡ Énergie /10 lundi matin</div>
+      <div class="sig-row"><span class="sig-tag sig-r">≤ 4/10</span><div class="sig-action"><strong>Semaine allégée.</strong> -25% volume, pas d'intensité haute.</div></div>
+      <div class="sig-row"><span class="sig-tag sig-y">5–6/10</span><div class="sig-action">Fais les séances mais plafonne l'intensité.</div></div>
+      <div class="sig-row"><span class="sig-tag sig-ok">≥ 7/10</span><div class="sig-action">Programme intact. Ne charge pas plus.</div></div>
+    </div>
+
+    <div class="signal-card">
+      <div class="sig-title">🦵 Douleurs / gênes</div>
+      <div class="sig-row"><span class="sig-tag sig-r">Genou / tendon</span><div class="sig-action"><strong>Stop run 48h.</strong> Bike erg Z2 en remplacement.</div></div>
+      <div class="sig-row"><span class="sig-tag sig-r">Épaule muscu</span><div class="sig-action"><strong>RPE max 5</strong> sur les exercices concernés. Face pull + rotation externe uniquement si douleur.</div></div>
+      <div class="sig-row"><span class="sig-tag sig-ok">Rien</span><div class="sig-action">Programme intact.</div></div>
+    </div>
+
+    <div class="ref-card" style="margin-top:8px">
+      <div class="ref-card-title">🟢 Protocoles récupération</div>
+      <div class="ref-row"><span class="ref-zone">👢 Bottes presso</span><span class="ref-val green">Post-longue 30' · Post-VMA 20'</span></div>
+      <div class="ref-row"><span class="ref-zone">⚡ Électrodes Compex</span><span class="ref-val green">Récup quad + ischios 20' soir</span></div>
+      <div class="ref-row"><span class="ref-zone">🥶 Boule froide</span><span class="ref-val green">Immédiat post-effort · 5 min</span></div>
+      <div class="ref-row"><span class="ref-zone">🔫 Pistolet massage</span><span class="ref-val green">Post-longue quadriceps · 3 min</span></div>
+    </div>
   </div>
 
+  <!-- ══ JOURNAL ══ -->
   <div class="page" id="page-journal">
     <div class="page-hero">
       <div class="page-eye">Historique · Toutes séances</div>
       <div class="page-title">Journal<br><span>d'Entraînement</span></div>
-      <div class="page-sub">Tes retours · Sauvegardés localement sur cet appareil</div>
+      <div class="page-sub">Tes retours séance par séance · Sauvegardés localement sur cet appareil</div>
     </div>
     <div id="journalList"></div>
   </div>
 
 </main>
 
+<!-- ── MODAL OVERLAY ── -->
 <div class="modal-overlay" id="modalOverlay" onclick="closeModal()"></div>
+
+<!-- ── MODAL DRAWER ── -->
 <div class="modal-drawer" id="modalDrawer">
   <div class="modal-handle"></div>
   <div class="modal-header">
@@ -101,12 +195,24 @@
   <div class="modal-body" id="modalBody"></div>
 </div>
 
+<!-- ── BOTTOM NAV ── -->
 <nav class="bottom-nav">
-  <button class="nav-btn active" onclick="switchPage('programme',this)"><span class="nav-icon">🏃</span><span class="nav-label">Programme</span></button>
-  <button class="nav-btn" onclick="switchPage('muscu',this)"><span class="nav-icon">💪</span><span class="nav-label">Muscu</span></button>
-  <button class="nav-btn" onclick="switchPage('nage',this)"><span class="nav-icon">🏊</span><span class="nav-label">Nage</span></button>
-  <button class="nav-btn" onclick="switchPage('ref',this)"><span class="nav-icon">📊</span><span class="nav-label">Référence</span></button>
-  <button class="nav-btn" onclick="switchPage('journal',this)"><span class="nav-icon">📓</span><span class="nav-label">Journal</span></button>
+  <button class="nav-btn active" onclick="switchPage('programme',this)">
+    <span class="nav-icon">🏃</span>
+    <span class="nav-label">Programme</span>
+  </button>
+  <button class="nav-btn" onclick="switchPage('nage',this)">
+    <span class="nav-icon">🏊</span>
+    <span class="nav-label">Nage</span>
+  </button>
+  <button class="nav-btn" onclick="switchPage('ref',this)">
+    <span class="nav-icon">📊</span>
+    <span class="nav-label">Référence</span>
+  </button>
+  <button class="nav-btn" onclick="switchPage('journal',this)">
+    <span class="nav-icon">📓</span>
+    <span class="nav-label">Journal</span>
+  </button>
 </nav>
 
 <script src="data.js"></script>
