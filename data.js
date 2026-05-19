@@ -19,6 +19,13 @@ const ALLURES = [
 ];
 
 // type: run-easy | run-hard | run-race | swim | muscu-a | muscu-b | muscu-c | rest | race
+const WEEKS = [
+  { id:'S01', label:'Spécifique 10k — Entrée',  badge:'S7',   startDate:'2026-05-18' },
+  { id:'S02', label:'Spécifique 10k — S8',       badge:'S8',   startDate:'2026-05-25' },
+  { id:'S03', label:'Spécifique 10k — Pic',      badge:'S9',   startDate:'2026-06-01' },
+  { id:'S04', label:'Assimilation + Rappel',      badge:'S10',  startDate:'2026-06-08' },
+  { id:'S05', label:'Race Week · 10k Estérel',   badge:'RACE', startDate:'2026-06-15' },
+];
 const SESSIONS = [
 
   // ══ S01 · 18 Mai ══
