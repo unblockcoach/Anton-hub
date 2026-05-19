@@ -1,4 +1,4 @@
-const CACHE = 'anton-hub-v2';
+const CACHE = 'anton-hub-v3';
 const ASSETS = [
   '/Anton-hub/',
   '/Anton-hub/index.html',
