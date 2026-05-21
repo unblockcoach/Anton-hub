@@ -51,6 +51,7 @@ function switchPage(name, btn) {
   currentPage = name;
   window.scrollTo(0, 0);
   if (name === 'journal') renderJournal();
+  if (name === 'forme') renderForme();
 }
 
 // ── FIND TODAY'S WEEK ──
@@ -534,3 +535,227 @@ function registerSW() {
     navigator.serviceWorker.register('sw.js').catch(() => {});
   }
 }
+
+// ─────────────────────────────────────────
+// FORME DU JOUR
+// ─────────────────────────────────────────
+
+let formeCharts = {};
+
+function renderForme() {
+  renderFormeSaisie();
+  renderFormeReco();
+  renderFormeCharts();
+  renderFormeHistory();
+}
+
+// ── SAISIE ──
+function renderFormeSaisie() {
+  const today = new Date().toISOString().split('T')[0];
+  const existing = getFormeEntry(today);
+  const label = new Date().toLocaleDateString('fr-FR', { weekday:'long', day:'numeric', month:'long' });
+
+  document.getElementById('formeSaisie').innerHTML = `
+    <div class="forme-saisie-title">Saisie du jour</div>
+    <div class="forme-date">📅 ${label.charAt(0).toUpperCase() + label.slice(1)}</div>
+    <div class="forme-fields">
+      <div class="forme-field">
+        <div class="forme-field-label">💚 VFC <span class="forme-field-unit">score nuit</span></div>
+        <input class="forme-input" type="number" id="inputVFC" placeholder="—"
+          min="20" max="120" value="${existing?.vfc || ''}" inputmode="numeric">
+      </div>
+      <div class="forme-field">
+        <div class="forme-field-label">😴 Sommeil <span class="forme-field-unit">/100</span></div>
+        <input class="forme-input" type="number" id="inputSommeil" placeholder="—"
+          min="0" max="100" value="${existing?.sommeil || ''}" inputmode="numeric">
+      </div>
+      <div class="forme-field">
+        <div class="forme-field-label">⚖️ Poids <span class="forme-field-unit">kg</span></div>
+        <input class="forme-input" type="number" id="inputPoids" placeholder="—"
+          min="50" max="150" step="0.1" value="${existing?.poids || ''}" inputmode="decimal">
+      </div>
+      <div class="forme-field">
+        <div class="forme-field-label">⚡ Énergie <span class="forme-field-unit">/10</span></div>
+        <input class="forme-input" type="number" id="inputEnergie" placeholder="—"
+          min="1" max="10" value="${existing?.energie || ''}" inputmode="numeric">
+      </div>
+    </div>
+    <button class="forme-save-btn" onclick="saveFormeEntry()">
+      ${existing ? '✏️ Mettre à jour' : '💾 Sauvegarder'}
+    </button>
+    <div class="forme-saved-msg" id="formeSavedMsg">✓ Sauvegardé !</div>
+  `;
+}
+
+function saveFormeEntry() {
+  const today = new Date().toISOString().split('T')[0];
+  const vfc     = parseFloat(document.getElementById('inputVFC').value)     || null;
+  const sommeil = parseFloat(document.getElementById('inputSommeil').value) || null;
+  const poids   = parseFloat(document.getElementById('inputPoids').value)   || null;
+  const energie = parseFloat(document.getElementById('inputEnergie').value) || null;
+
+  if (!vfc && !sommeil && !poids && !energie) return;
+
+  const entry = { date: today, vfc, sommeil, poids, energie, ts: new Date().toLocaleString('fr-FR') };
+  localStorage.setItem('forme_' + today, JSON.stringify(entry));
+
+  const msg = document.getElementById('formeSavedMsg');
+  msg.classList.add('show');
+  setTimeout(() => msg.classList.remove('show'), 2000);
+
+  renderFormeSaisie();
+  renderFormeReco();
+  renderFormeCharts();
+  renderFormeHistory();
+}
+
+function getFormeEntry(date) {
+  const raw = localStorage.getItem('forme_' + date);
+  return raw ? JSON.parse(raw) : null;
+}
+
+function getFormeEntries(days = 30) {
+  const entries = [];
+  for (let i = days - 1; i >= 0; i--) {
+    const d = new Date();
+    d.setDate(d.getDate() - i);
+    const key = d.toISOString().split('T')[0];
+    const e = getFormeEntry(key);
+    if (e) entries.push(e);
+  }
+  return entries;
+}
+
+// ── RECOMMANDATION ──
+function renderFormeReco() {
+  const entries = getFormeEntries(5).slice(-3);
+  const el = document.getElementById('formeReco');
+
+  if (entries.length < 2) {
+    el.innerHTML = `<div class="reco-label">Recommandation</div>
+      <div class="reco-status reco-ok">📊 En attente de données</div>
+      <div class="reco-detail">Remplis 2–3 matins pour obtenir une recommandation personnalisée.</div>`;
+    return;
+  }
+
+  const avgVFC     = entries.filter(e => e.vfc).reduce((s,e) => s+e.vfc, 0) / entries.filter(e => e.vfc).length;
+  const avgSommeil = entries.filter(e => e.sommeil).reduce((s,e) => s+e.sommeil, 0) / entries.filter(e => e.sommeil).length;
+  const avgEnergie = entries.filter(e => e.energie).reduce((s,e) => s+e.energie, 0) / entries.filter(e => e.energie).length;
+
+  // Baseline = première semaine de données
+  const allEntries = getFormeEntries(30);
+  const baseVFC = allEntries.length > 5
+    ? allEntries.slice(0, 7).filter(e => e.vfc).reduce((s,e) => s+e.vfc, 0) / Math.max(1, allEntries.slice(0,7).filter(e => e.vfc).length)
+    : avgVFC;
+
+  const vfcDrop = baseVFC > 0 ? ((baseVFC - avgVFC) / baseVFC) * 100 : 0;
+
+  let status, cls, detail;
+
+  if (vfcDrop > 15 || avgSommeil < 50 || avgEnergie < 4) {
+    status = '🔴 Récupération forcée';
+    cls = 'reco-alert';
+    detail = `VFC en baisse de ${vfcDrop.toFixed(0)}% · Sommeil ${avgSommeil?.toFixed(0) || '—'}/100 · Énergie ${avgEnergie?.toFixed(1) || '—'}/10\n→ Volume -30%, zéro intensité haute cette semaine.`;
+  } else if (vfcDrop > 8 || avgSommeil < 65 || avgEnergie < 6) {
+    status = '🟡 Charge réduite';
+    cls = 'reco-warn';
+    detail = `VFC légèrement en baisse · Sommeil ${avgSommeil?.toFixed(0) || '—'}/100 · Énergie ${avgEnergie?.toFixed(1) || '—'}/10\n→ Programme intact mais surveille. Plafonne l'intensité si séance qualitative.`;
+  } else {
+    status = '🟢 Programme intact';
+    cls = 'reco-ok';
+    detail = `VFC stable · Sommeil ${avgSommeil?.toFixed(0) || '—'}/100 · Énergie ${avgEnergie?.toFixed(1) || '—'}/10\n→ Tu es prêt. Exécute le programme comme prévu.`;
+  }
+
+  el.innerHTML = `
+    <div class="reco-label">Recommandation · 3 derniers jours</div>
+    <div class="reco-status ${cls}">${status}</div>
+    <div class="reco-detail">${esc(detail)}</div>
+  `;
+}
+
+// ── GRAPHIQUES ──
+function renderFormeCharts() {
+  const entries = getFormeEntries(30);
+  if (entries.length === 0) return;
+
+  const labels   = entries.map(e => e.date.slice(5)); // MM-DD
+  const vfcData      = entries.map(e => e.vfc || null);
+  const sommeilData  = entries.map(e => e.sommeil || null);
+  const poidsData    = entries.map(e => e.poids || null);
+  const energieData  = entries.map(e => e.energie || null);
+
+  const isDark = document.documentElement.dataset.theme === 'dark';
+  const gridColor  = isDark ? 'rgba(255,255,255,0.06)' : 'rgba(0,0,0,0.06)';
+  const tickColor  = isDark ? '#4D6010' : '#6070A8';
+  const pointColor = isDark ? '#C8F135' : '#1A3BAA';
+
+  const chartDefaults = {
+    type: 'line',
+    options: {
+      responsive: true,
+      maintainAspectRatio: true,
+      plugins: { legend: { display: false } },
+      scales: {
+        x: { grid: { color: gridColor }, ticks: { color: tickColor, font: { size: 9 }, maxTicksLimit: 6 } },
+        y: { grid: { color: gridColor }, ticks: { color: tickColor, font: { size: 9 } } },
+      },
+      elements: { point: { radius: 3 }, line: { tension: 0.3 } },
+    }
+  };
+
+  function mkChart(id, data, color, label) {
+    if (formeCharts[id]) { formeCharts[id].destroy(); }
+    const ctx = document.getElementById(id);
+    if (!ctx) return;
+    formeCharts[id] = new Chart(ctx, {
+      ...chartDefaults,
+      data: {
+        labels,
+        datasets: [{
+          data,
+          borderColor: color,
+          backgroundColor: color + '22',
+          fill: true,
+          spanGaps: true,
+          label,
+        }]
+      }
+    });
+  }
+
+  mkChart('chartVFC',     vfcData,     '#4ADE80', 'VFC');
+  mkChart('chartSommeil', sommeilData, '#3D9EDD', 'Sommeil');
+  mkChart('chartPoids',   poidsData,   isDark ? '#C8F135' : '#1A3BAA', 'Poids');
+  mkChart('chartEnergie', energieData, '#F0B429', 'Énergie');
+}
+
+// ── HISTORIQUE ──
+function renderFormeHistory() {
+  const entries = getFormeEntries(30).reverse();
+  const el = document.getElementById('formeHistory');
+
+  if (!entries.length) {
+    el.innerHTML = `<div class="journal-empty">Aucune donnée encore.<br>Remplis la saisie du matin !</div>`;
+    return;
+  }
+
+  el.innerHTML = entries.map(e => `
+    <div class="forme-entry">
+      <div class="fe-date">${e.date.slice(5)}</div>
+      <div class="fe-metrics">
+        ${e.vfc     ? `<div class="fe-metric"><div class="fe-val" style="color:var(--green)">${e.vfc}</div><div class="fe-lbl">VFC</div></div>` : ''}
+        ${e.sommeil ? `<div class="fe-metric"><div class="fe-val" style="color:var(--blue)">${e.sommeil}</div><div class="fe-lbl">Sommeil</div></div>` : ''}
+        ${e.poids   ? `<div class="fe-metric"><div class="fe-val" style="color:var(--accent)">${e.poids}</div><div class="fe-lbl">kg</div></div>` : ''}
+        ${e.energie ? `<div class="fe-metric"><div class="fe-val" style="color:var(--gold)">${e.energie}/10</div><div class="fe-lbl">Énergie</div></div>` : ''}
+      </div>
+      <button class="fe-delete" onclick="deleteFormeEntry('${e.date}')">🗑</button>
+    </div>
+  `).join('');
+}
+
+function deleteFormeEntry(date) {
+  if (!confirm('Supprimer cette entrée ?')) return;
+  localStorage.removeItem('forme_' + date);
+  renderForme();
+}
+

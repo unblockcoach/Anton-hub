@@ -178,6 +178,47 @@
     <div id="journalList"></div>
   </div>
 
+  <!-- ══ FORME ══ -->
+  <div class="page" id="page-forme">
+    <div class="page-hero">
+      <div class="page-eye">Saisie quotidienne · Matin</div>
+      <div class="page-title">Forme<br><span>du Jour</span></div>
+      <div class="page-sub">Remplis chaque matin · 30 secondes · Données sauvegardées localement</div>
+    </div>
+
+    <!-- Saisie du jour -->
+    <div class="forme-saisie" id="formeSaisie"></div>
+
+    <!-- Recommandation automatique -->
+    <div class="forme-reco" id="formeReco"></div>
+
+    <!-- Graphiques -->
+    <div class="forme-charts">
+      <div class="chart-block">
+        <div class="chart-title">💚 VFC · 30 jours</div>
+        <canvas id="chartVFC"></canvas>
+      </div>
+      <div class="chart-block">
+        <div class="chart-title">😴 Sommeil · 30 jours</div>
+        <canvas id="chartSommeil"></canvas>
+      </div>
+      <div class="chart-block">
+        <div class="chart-title">⚖️ Poids · 30 jours</div>
+        <canvas id="chartPoids"></canvas>
+      </div>
+      <div class="chart-block">
+        <div class="chart-title">⚡ Énergie · 30 jours</div>
+        <canvas id="chartEnergie"></canvas>
+      </div>
+    </div>
+
+    <!-- Historique -->
+    <div class="forme-history-header">
+      <div class="chart-title" style="padding:16px 20px 8px">📋 Historique</div>
+    </div>
+    <div id="formeHistory"></div>
+  </div>
+
 </main>
 
 <!-- ── MODAL OVERLAY ── -->
@@ -205,6 +246,10 @@
     <span class="nav-icon">🏊</span>
     <span class="nav-label">Nage</span>
   </button>
+  <button class="nav-btn" onclick="switchPage('forme',this)">
+    <span class="nav-icon">📈</span>
+    <span class="nav-label">Forme</span>
+  </button>
   <button class="nav-btn" onclick="switchPage('ref',this)">
     <span class="nav-icon">📊</span>
     <span class="nav-label">Référence</span>
@@ -215,6 +260,7 @@
   </button>
 </nav>
 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
 <script src="data.js"></script>
 <script src="app.js"></script>
 </body>
